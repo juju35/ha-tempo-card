@@ -367,3 +367,22 @@ test("folding: a tap elsewhere (pointer) folds, not a press in the card; a keybo
   card.connectedCallback();
   assert.doesNotMatch(html(card), /19 of 22 left/);
 });
+
+test("no rewrite under a press: drawn after its release, and at once by its click", async () => {
+  const { card } = await newCard({ collapsed: ["season"] });
+  const before = html(card);
+  card._pressing = true;
+  card._toggled = new Map([["season", false]]);
+  card._update();
+  assert.equal(html(card), before, "no rewrite under the pointer");
+  card._onPressEnd();
+  await tick();
+  assert.match(html(card), /19 of 22 left/, "drawn right after the release");
+  card._pressing = true;
+  card._pressClick({ detail: 1 });
+  const title = { dataset: { action: "toggle_section", section: "season" } };
+  card.shadowRoot.listeners.click({ composedPath: () => [title, card], stopPropagation() {} });
+  assert.doesNotMatch(html(card), /19 of 22 left/, "the click draws at once");
+  card.disconnectedCallback();
+  assert.equal(card._pressing, false);
+});
