@@ -82,6 +82,7 @@ const STRINGS = {
     indexes: "Meter indexes",
     prices: "Price grid (per kWh)",
     subscription: "Monthly subscription",
+    currency: "Currency",
     days_left_entities: "Days left entities",
     language: "Language",
     lang_auto: "Auto (Home Assistant)",
@@ -128,6 +129,7 @@ const STRINGS = {
     indexes: "Index du compteur",
     prices: "Grille de prix (par kWh)",
     subscription: "Abonnement mensuel",
+    currency: "Devise",
     days_left_entities: "Entités des jours restants",
     language: "Langue",
     lang_auto: "Auto (Home Assistant)",
@@ -174,6 +176,7 @@ const STRINGS = {
     indexes: "Zählerstände",
     prices: "Preistabelle (pro kWh)",
     subscription: "Monatliche Grundgebühr",
+    currency: "Währung",
     days_left_entities: "Entitäten der verbleibenden Tage",
     language: "Sprache",
     lang_auto: "Automatisch (Home Assistant)",
@@ -220,6 +223,7 @@ const STRINGS = {
     indexes: "Índices del contador",
     prices: "Tabla de precios (por kWh)",
     subscription: "Suscripción mensual",
+    currency: "Moneda",
     days_left_entities: "Entidades de días restantes",
     language: "Idioma",
     lang_auto: "Automático (Home Assistant)",
@@ -266,6 +270,7 @@ const STRINGS = {
     indexes: "Letture del contatore",
     prices: "Tabella prezzi (per kWh)",
     subscription: "Abbonamento mensile",
+    currency: "Valuta",
     days_left_entities: "Entità dei giorni rimanenti",
     language: "Lingua",
     lang_auto: "Automatica (Home Assistant)",
@@ -312,6 +317,7 @@ const STRINGS = {
     indexes: "Meterstanden",
     prices: "Prijstabel (per kWh)",
     subscription: "Maandelijks vastrecht",
+    currency: "Valuta",
     days_left_entities: "Entiteiten resterende dagen",
     language: "Taal",
     lang_auto: "Automatisch (Home Assistant)",
@@ -358,6 +364,7 @@ const STRINGS = {
     indexes: "Leituras do contador",
     prices: "Tabela de preços (por kWh)",
     subscription: "Assinatura mensal",
+    currency: "Moeda",
     days_left_entities: "Entidades dos dias restantes",
     language: "Idioma",
     lang_auto: "Automático (Home Assistant)",
@@ -404,6 +411,7 @@ const STRINGS = {
     indexes: "Wskazania licznika",
     prices: "Cennik (za kWh)",
     subscription: "Miesięczna opłata stała",
+    currency: "Waluta",
     days_left_entities: "Encje pozostałych dni",
     language: "Język",
     lang_auto: "Automatycznie (Home Assistant)",
@@ -450,6 +458,7 @@ const STRINGS = {
     indexes: "Стања бројила",
     prices: "Ценовник (по kWh)",
     subscription: "Месечна претплата",
+    currency: "Валута",
     days_left_entities: "Ентитети преосталих дана",
     language: "Језик",
     lang_auto: "Аутоматски (Home Assistant)",
@@ -496,6 +505,7 @@ const STRINGS = {
     indexes: "Stanja brojila",
     prices: "Cenovnik (po kWh)",
     subscription: "Mesečna pretplata",
+    currency: "Valuta",
     days_left_entities: "Entiteti preostalih dana",
     language: "Jezik",
     lang_auto: "Automatski (Home Assistant)",
@@ -542,6 +552,7 @@ const STRINGS = {
     indexes: "Indexurile contorului",
     prices: "Grilă de prețuri (per kWh)",
     subscription: "Abonament lunar",
+    currency: "Monedă",
     days_left_entities: "Entitățile zilelor rămase",
     language: "Limbă",
     lang_auto: "Automat (Home Assistant)",
@@ -588,6 +599,7 @@ const STRINGS = {
     indexes: "Målerstande",
     prices: "Pristabel (pr. kWh)",
     subscription: "Månedligt abonnement",
+    currency: "Valuta",
     days_left_entities: "Entiteter for resterende dage",
     language: "Sprog",
     lang_auto: "Automatisk (Home Assistant)",
@@ -634,6 +646,7 @@ const STRINGS = {
     indexes: "Mätarställningar",
     prices: "Pristabell (per kWh)",
     subscription: "Månadsabonnemang",
+    currency: "Valuta",
     days_left_entities: "Entiteter för återstående dagar",
     language: "Språk",
     lang_auto: "Automatiskt (Home Assistant)",
@@ -680,6 +693,7 @@ const STRINGS = {
     indexes: "Показания на електромера",
     prices: "Ценова таблица (за kWh)",
     subscription: "Месечен абонамент",
+    currency: "Валута",
     days_left_entities: "Обекти за оставащите дни",
     language: "Език",
     lang_auto: "Автоматично (Home Assistant)",
@@ -726,6 +740,7 @@ const STRINGS = {
     indexes: "Показания счётчика",
     prices: "Тарифная сетка (за kWh)",
     subscription: "Ежемесячная абонентская плата",
+    currency: "Валюта",
     days_left_entities: "Объекты оставшихся дней",
     language: "Язык",
     lang_auto: "Автоматически (Home Assistant)",
@@ -772,6 +787,7 @@ const STRINGS = {
     indexes: "Показники лічильника",
     prices: "Тарифна сітка (за kWh)",
     subscription: "Щомісячна абонплата",
+    currency: "Валюта",
     days_left_entities: "Об'єкти днів, що залишились",
     language: "Мова",
     lang_auto: "Автоматично (Home Assistant)",
@@ -818,6 +834,7 @@ const STRINGS = {
     indexes: "Mérőállások",
     prices: "Ártáblázat (kWh-nként)",
     subscription: "Havi alapdíj",
+    currency: "Pénznem",
     days_left_entities: "Hátralévő napok entitásai",
     language: "Nyelv",
     lang_auto: "Automatikus (Home Assistant)",
@@ -864,6 +881,7 @@ const STRINGS = {
     indexes: "Stavy elektromera",
     prices: "Cenník (za kWh)",
     subscription: "Mesačný paušál",
+    currency: "Mena",
     days_left_entities: "Entity zostávajúcich dní",
     language: "Jazyk",
     lang_auto: "Automaticky (Home Assistant)",
@@ -910,6 +928,7 @@ const STRINGS = {
     indexes: "Stavy elektroměru",
     prices: "Ceník (za kWh)",
     subscription: "Měsíční paušál",
+    currency: "Měna",
     days_left_entities: "Entity zbývajících dnů",
     language: "Jazyk",
     lang_auto: "Automaticky (Home Assistant)",
@@ -956,6 +975,7 @@ const STRINGS = {
     indexes: "Stanja števca",
     prices: "Cenik (na kWh)",
     subscription: "Mesečna naročnina",
+    currency: "Valuta",
     days_left_entities: "Entitete preostalih dni",
     language: "Jezik",
     lang_auto: "Samodejno (Home Assistant)",
@@ -1002,6 +1022,7 @@ const STRINGS = {
     indexes: "Skaitītāja rādījumi",
     prices: "Cenu tabula (par kWh)",
     subscription: "Mēneša abonēšanas maksa",
+    currency: "Valūta",
     days_left_entities: "Atlikušo dienu entītijas",
     language: "Valoda",
     lang_auto: "Automātiski (Home Assistant)",
@@ -1048,6 +1069,7 @@ const STRINGS = {
     indexes: "Ενδείξεις μετρητή",
     prices: "Τιμοκατάλογος (ανά kWh)",
     subscription: "Μηνιαίο πάγιο",
+    currency: "Νόμισμα",
     days_left_entities: "Οντότητες υπόλοιπων ημερών",
     language: "Γλώσσα",
     lang_auto: "Αυτόματα (Home Assistant)",
@@ -2199,15 +2221,11 @@ class TempoMiniCard extends TempoCard {
 // Visual editors (ha-form)
 // ---------------------------------------------------------------------------
 
-const DEFAULTS = { show_title: true, show_subtitle: true, show_period: true, show_season: true, show_cost: true, zoom: true, collapsed: [] };
+const DEFAULTS = { show_title: true, show_subtitle: true, show_period: true, show_season: true, show_cost: true, zoom: true, collapsed: [], currency: "EUR" };
 
 class TempoCardEditor extends HTMLElement {
   static get toggles() {
     return ["show_title", "show_subtitle", "show_period", "show_season", "show_cost"];
-  }
-
-  static get full() {
-    return true;
   }
 
   setConfig(config) {
@@ -2230,7 +2248,6 @@ class TempoCardEditor extends HTMLElement {
     const tr = (k) => t(this._hass, this._config, k);
     const sensor = { entity: { domain: ["sensor", "binary_sensor"] } };
     const expandable = (name, icon, schema) => ({ type: "expandable", name, title: tr(name), icon, schema });
-    const full = this.constructor.full;
     return [
       { name: "title", selector: { text: {} } },
       { name: "today_entity", selector: { entity: { domain: "sensor" } } },
@@ -2238,14 +2255,11 @@ class TempoCardEditor extends HTMLElement {
       { name: "offpeak_entity", selector: sensor },
       { name: "offpeak_hours", selector: { text: {} } },
       { type: "grid", name: "", schema: this.constructor.toggles.map((name) => ({ name, selector: { boolean: {} } })) },
-      ...(full
-        ? [
-            {
-              name: "collapsed",
-              selector: { select: { multiple: true, mode: "list", options: SECTIONS.map((value) => ({ value, label: tr(`show_${value}`) })) } },
-            },
-          ]
-        : []),
+      // The mini card too: its detail button shows the full card's content with this same configuration.
+      {
+        name: "collapsed",
+        selector: { select: { multiple: true, mode: "list", options: SECTIONS.map((value) => ({ value, label: tr(`show_${value}`) })) } },
+      },
       expandable(
         "indexes",
         "mdi:counter",
@@ -2255,6 +2269,7 @@ class TempoCardEditor extends HTMLElement {
         ...INDEX_KEYS.map((name) => ({ name, selector: { number: { min: 0, step: 0.0001, mode: "box", unit_of_measurement: "/kWh" } } })),
       ]),
       { name: "subscription", selector: { number: { min: 0, step: 0.01, mode: "box" } } },
+      { name: "currency", selector: { text: {} } },
       expandable(
         "days_left_entities",
         "mdi:calendar-range",
@@ -2318,13 +2333,10 @@ const cleanConfig = (value) => {
   return config;
 };
 
+// The full card's sections too: the detail button shows the full card's content with this same configuration.
 class TempoMiniCardEditor extends TempoCardEditor {
   static get toggles() {
-    return ["show_title", "show_subtitle", "zoom"];
-  }
-
-  static get full() {
-    return false;
+    return ["show_title", "show_subtitle", "zoom", "show_period", "show_season", "show_cost"];
   }
 }
 

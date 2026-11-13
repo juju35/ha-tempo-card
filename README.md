@@ -152,6 +152,11 @@ language: fr
 type: custom:tempo-mini-card
 title: Tempo
 zoom: true
+show_period: true
+show_season: true
+show_cost: true
+collapsed:
+  - season
 language: fr
 ```
 
@@ -166,16 +171,16 @@ language: fr
 | `tomorrow_entity` | both | Discovered | Entity giving tomorrow's color (`BLEU`/`BLAN`/`ROUG`, `----` or `inconnu` while unknown) |
 | `offpeak_entity` | both | Discovered | Binary sensor on during off-peak hours, or an entity giving the tariff period (`HC`/`HP`, `HCJB`, `HP ROUGE`…) |
 | `offpeak_hours` | both | `22:00-06:00` | Off-peak hours, one range or several (`"12:30-14:30, 23:00-07:00"` or a list), for the period bounds and the countdown (and the period itself without `offpeak_entity`) |
-| `zoom` | mini | `true` | Detail button at the top right of the mini card: it shows the full card's content (with the same options) and switches back; a click outside the card also brings the compact view back. `false` removes the button |
-| `show_period` | full | `true` | Current period: hours, progress, countdown, current and next price |
-| `show_season` | full | `true` | Days left of each color in the season (needs days left entities, RTE Tempo) |
-| `show_cost` | full | `true` | Estimated cost of today and of the month (needs meter indexes) |
-| `collapsed` | full | `[]` | Sections folded by default, among `period`, `season` and `cost` |
+| `zoom` | mini | `true` | Detail button at the top right of the mini card: it shows the full card's content (with the same options, so `show_period`, `show_season`, `show_cost` and `collapsed` can be set on the mini card too, in YAML or in its visual editor) and switches back; a click outside the card also brings the compact view back. `false` removes the button |
+| `show_period` | both | `true` | Current period: hours, progress, countdown, current and next price |
+| `show_season` | both | `true` | Days left of each color in the season (needs days left entities, RTE Tempo) |
+| `show_cost` | both | `true` | Estimated cost of today and of the month (needs meter indexes) |
+| `collapsed` | both | `[]` | Sections folded by default, among `period`, `season` and `cost` |
 | `days_left` | both | Discovered | Entities of the days left: `blue`, `white`, `red` |
 | `indexes` | both | Discovered | Meter indexes (kWh, Wh or MWh, recorded in the statistics): `blue_hc`, `blue_hp`, `white_hc`, `white_hp`, `red_hc`, `red_hp` |
 | `prices` | both | EDF regulated prices | Price per kWh of each period, same keys as `indexes`: a number or a price entity. Without it, Tarif EDF's prices when installed, otherwise the EDF regulated Tempo prices incl. VAT of 1 August 2026 (0.1356 / 0.1654 blue, 0.1536 / 0.1921 white, 0.1615 / 0.7295 red, off-peak / peak, CRE deliberation 2026-147); a price entity that is unavailable falls back to these |
 | `subscription` | both | — | Monthly subscription, added to the month's cost (and its daily share to today's) |
-| `currency` | both | `EUR` | Currency of the prices |
+| `currency` | both | `EUR` | Currency of the prices (ISO 4217 code, e.g. `EUR`, `CHF`) |
 | `language` | both | Auto | Force language: `fr`, `en`, `de`, `es`, `sr`, `sr-Latn`, `it`, `nl`, `pt`, `pl`, `ro`, `da`, `sv`, `bg`, `ru`, `uk`, `hu`, `sk`, `cs`, `sl`, `lv` or `el` (auto-detects from HA settings) |
 
 > [!NOTE]

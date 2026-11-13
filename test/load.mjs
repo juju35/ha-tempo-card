@@ -97,7 +97,7 @@ export const load = ({ now = "2026-11-12T15:42:00+01:00" } = {}) => {
     `${source}
     ({ colorOf, periodOf, parseRanges, periodAt, tempoDay, seasonOf, seasonTotal, wall, epochOf, discover, sourcesOf, cleanConfig, STRINGS, LANGUAGES,
        DEFAULT_PRICES, INDEX_KEYS, TempoCard: customElements.get("tempo-card"), TempoMiniCard: customElements.get("tempo-mini-card"),
-       TempoCardEditor: customElements.get("tempo-card-editor"), window, document, fire })`,
+       TempoCardEditor: customElements.get("tempo-card-editor"), TempoMiniCardEditor: customElements.get("tempo-mini-card-editor"), window, document, fire })`,
     sandbox,
   );
 };
