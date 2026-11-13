@@ -254,7 +254,8 @@ test("sections can be hidden or folded, and fold back on a click elsewhere", asy
   const title = { dataset: { action: "toggle_section", section: "season" } };
   card.shadowRoot.listeners.click({ composedPath: () => [title, card], stopPropagation() {} });
   assert.match(html(card), /19 of 22 left/);
-  t.fire("click", { composedPath: () => [] });
+  t.fire("pointerdown", { composedPath: () => [] });
+  t.fire("pointerup", { composedPath: () => [] });
   assert.doesNotMatch(html(card), /19 of 22 left/);
 });
 
@@ -274,7 +275,8 @@ test("the mini card shows the two days and switches to the full card and back", 
   assert.deepEqual({ ...card.getGridOptions() }, { columns: 6, min_columns: 3, rows: "auto" });
   card.shadowRoot.listeners.click({ composedPath: () => [{ dataset: { action: "zoom" } }, card], stopPropagation() {}, detail: 1 });
   assert.match(html(card), /Season 2026–2027/);
-  t.fire("click", { composedPath: () => [] });
+  t.fire("pointerdown", { composedPath: () => [] });
+  t.fire("pointerup", { composedPath: () => [] });
   assert.doesNotMatch(html(card), /Season 2026–2027/);
   const noZoom = await newCard({ zoom: false }, { mini: true });
   assert.doesNotMatch(html(noZoom.card), /data-action="zoom"/);
@@ -343,4 +345,25 @@ test("the visual editor keeps a price entity set in YAML", () => {
 
 test("mock states carry no personal name", () => {
   assert.ok(Object.keys(states).every((id) => /^(sensor|binary_sensor)\.(rte_tempo|linky)_/.test(id)));
+});
+
+test("folding: a tap elsewhere (pointer) folds, not a press in the card; a keyboard click too; leaving the page folds back", async () => {
+  const { tc: t, card } = await newCard({ collapsed: ["season"] });
+  const title = { dataset: { action: "toggle_section", section: "season" } };
+  const open = () => card.shadowRoot.listeners.click({ composedPath: () => [title, card], stopPropagation() {} });
+  open();
+  // A slider pressed in the card and released outside of it: nothing folds.
+  t.fire("pointerdown", { composedPath: () => [card] });
+  t.fire("pointerup", { composedPath: () => [] });
+  assert.match(html(card), /19 of 22 left/);
+  // A mouse click with no pointer events around it does not fold either (the pointer does it); a keyboard one does.
+  t.fire("click", { detail: 1, composedPath: () => [] });
+  assert.match(html(card), /19 of 22 left/);
+  t.fire("click", { detail: 0, composedPath: () => [] });
+  assert.doesNotMatch(html(card), /19 of 22 left/);
+  // Left with the section open and back: folded.
+  open();
+  card.disconnectedCallback();
+  card.connectedCallback();
+  assert.doesNotMatch(html(card), /19 of 22 left/);
 });
