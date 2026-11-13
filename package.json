@@ -1,6 +1,6 @@
 {
   "name": "ha-tempo-card",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Lovelace cards for Home Assistant for the EDF Tempo tariff: colors of today and tomorrow, days left in the season, off-peak / peak countdown and estimated cost.",
   "private": true,
   "type": "module",

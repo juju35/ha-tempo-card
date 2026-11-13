@@ -330,6 +330,25 @@ test("the visual editor builds its form", () => {
   assert.equal(t.TempoCard.getConfigElement().constructor, t.TempoCardEditor);
 });
 
+test("the editors offer the currency; the mini card's, the full card's options its detail view uses", () => {
+  const t = load();
+  const names = (Cls) => {
+    const ed = new Cls();
+    ed.hass = makeHass();
+    ed.setConfig({});
+    return ed._form.schema.flatMap((f) => (f.type === "grid" ? f.schema.map((x) => x.name) : [f.name]));
+  };
+  const full = names(t.TempoCardEditor);
+  const mini = names(t.TempoMiniCardEditor);
+  assert.ok(full.includes("currency") && mini.includes("currency"));
+  for (const name of full) assert.ok(mini.includes(name), name);
+  assert.ok(mini.includes("zoom"));
+  for (const [l, table] of Object.entries(t.STRINGS)) assert.ok(table.currency, l);
+  // EUR, the default, stays out of the YAML.
+  assert.deepEqual(JSON.parse(JSON.stringify(t.cleanConfig({ currency: "EUR", show_season: false }))), { show_season: false });
+  assert.deepEqual(JSON.parse(JSON.stringify(t.cleanConfig({ currency: "CHF" }))), { currency: "CHF" });
+});
+
 test("the visual editor keeps a price entity set in YAML", () => {
   const t = load();
   const ed = new t.TempoCardEditor();
