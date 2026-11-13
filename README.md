@@ -8,6 +8,13 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/juju35/ha-tempo-card/blob/main/LICENSE)
 [![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-FFDD00?logo=buymeacoffee&logoColor=black)](https://buymeacoffee.com/julienstep9)
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/juju35/ha-tempo-card/main/images/rtetempo.png" alt="RTE Tempo" width="64">&nbsp;&nbsp;
+  <img src="https://raw.githubusercontent.com/juju35/ha-tempo-card/main/images/tarif_edf.png" alt="Tarif EDF" width="64">&nbsp;&nbsp;
+  <img src="https://raw.githubusercontent.com/juju35/ha-tempo-card/main/images/tempo.png" alt="EDF Tempo" width="64">&nbsp;&nbsp;
+  <img src="https://raw.githubusercontent.com/juju35/ha-tempo-card/main/images/linkytic.png" alt="Linky TIC" width="64">
+</p>
+
 Lovelace cards for Home Assistant for the French **EDF Tempo** electricity tariff: the color of today and tomorrow (blue, white or red), the days left of each color in the season, the current off-peak / peak period with its countdown, and the estimated cost of the day and of the month from your meter indexes and a price grid of your own.
 
 The cards work on top of the integrations you already use — [RTE Tempo](https://github.com/hekmon/rtetempo), [Tarif EDF](https://github.com/delphiki/hass-tarif-edf), [EDF Tempo](https://github.com/chrisbansart/ha_tempo), [Linky TIC](https://github.com/hekmon/linkytic) or a [ZLinky_TIC](https://lixee.fr/) paired with [Zigbee2MQTT](https://www.zigbee2mqtt.io/devices/ZLinky_TIC.html). Entities are **discovered automatically** from the Home Assistant entity registry; any entity can also be given in the options.
@@ -38,10 +45,10 @@ The cards work on top of the integrations you already use — [RTE Tempo](https:
 
 | Integration | What the cards read |
 |---|---|
-| [RTE Tempo](https://github.com/hekmon/rtetempo) (custom, `rtetempo`) | Color of today and tomorrow, **days left** of each color, off-peak flag and next off-peak change |
-| [Tarif EDF](https://github.com/delphiki/hass-tarif-edf) (custom, `tarif_edf`, Tempo contract) | Color of today and tomorrow (its calendar-day sensors, read as Tempo days: before 06:00, yesterday's and today's), **Tempo prices** of the six periods (used as the price grid) |
-| [EDF Tempo](https://github.com/chrisbansart/ha_tempo) (custom, `tempo`) | Color of today and tomorrow and current period (attributes of its sensor) |
-| [Linky TIC](https://github.com/hekmon/linkytic) (custom, `linkytic`) | Historic mode: the six Tempo indexes (`BBRHCJB` … `BBRHPJR`), current period (`PTEC`) and tomorrow's color (`DEMAIN`); standard mode: indexes `EASF01`-`EASF06`, the tariff label (`LTARF`) and the colors of today and tomorrow from the status register (`STGE`) |
+| <img src="https://raw.githubusercontent.com/juju35/ha-tempo-card/main/images/rtetempo.png" alt="" width="16"> [RTE Tempo](https://github.com/hekmon/rtetempo) (custom, `rtetempo`) | Color of today and tomorrow, **days left** of each color, off-peak flag and next off-peak change |
+| <img src="https://raw.githubusercontent.com/juju35/ha-tempo-card/main/images/tarif_edf.png" alt="" width="16"> [Tarif EDF](https://github.com/delphiki/hass-tarif-edf) (custom, `tarif_edf`, Tempo contract) | Color of today and tomorrow (its calendar-day sensors, read as Tempo days: before 06:00, yesterday's and today's), **Tempo prices** of the six periods (used as the price grid) |
+| <img src="https://raw.githubusercontent.com/juju35/ha-tempo-card/main/images/tempo.png" alt="" width="16"> [EDF Tempo](https://github.com/chrisbansart/ha_tempo) (custom, `tempo`) | Color of today and tomorrow and current period (attributes of its sensor) |
+| <img src="https://raw.githubusercontent.com/juju35/ha-tempo-card/main/images/linkytic.png" alt="" width="16"> [Linky TIC](https://github.com/hekmon/linkytic) (custom, `linkytic`) | Historic mode: the six Tempo indexes (`BBRHCJB` … `BBRHPJR`), current period (`PTEC`) and tomorrow's color (`DEMAIN`); standard mode: indexes `EASF01`-`EASF06`, the tariff label (`LTARF`) and the colors of today and tomorrow from the status register (`STGE`) |
 | [ZLinky_TIC](https://www.zigbee2mqtt.io/devices/ZLinky_TIC.html) in Zigbee2MQTT (`mqtt`) | Indexes `current_tier1`-`6_summ_delivered`, current period (`active_register_tier_delivered` / `current_price`) and tomorrow's color (`tomorrow_color`) |
 | Any other entity | Set `today_entity`, `tomorrow_entity`, `offpeak_entity`, `indexes`, `prices` or `days_left` (templates, utility meters, other integrations…) |
 
