@@ -31,7 +31,7 @@ The cards work on top of the integrations you already use — [RTE Tempo](https:
 
 - Two cards: a full **Tempo Card** (`custom:tempo-card`) and a compact **Tempo Mini Card** (`custom:tempo-mini-card`)
 - Color of **today and tomorrow**, with the date of each Tempo day (a Tempo day runs from 06:00 to 06:00); tomorrow shows *Not yet known* until RTE publishes it
-- Animated scene: a pylon feeds a house under the sky of the period, the current flows faster as the day gets dearer, and a warning flashes on a red day at peak hours (see [Animations](#animations))
+- Animated scene, drawn like the appliances of the other cards: a pylon feeds a house under the sun or the moon, the current flows faster as the day gets dearer, and a warning flashes on a red day at peak hours (see [Animations](#animations))
 - **Current period** (off-peak or peak hours) with its hours, a progress bar and a countdown to the next change, the current price per kWh and the price of the next period (with tomorrow's color when the next period starts the next Tempo day)
 - **Days left** of each color in the season (1 September to 31 August: 22 red, 43 white, the rest blue), with bars
 - **Estimated cost** of today and of the month, per color and period, from the long-term statistics of the six Tempo meter indexes and a price grid (EDF regulated prices by default, numbers or price entities), with an optional monthly subscription
@@ -192,7 +192,7 @@ language: fr
 
 The scene and the day discs animate with the day and the period; every animation honours `prefers-reduced-motion`.
 
-A blue day at peak hours: the sun turns its rays, the current flows calmly along the line, and today's disc sends out soft ripples:
+A blue day at peak hours: the sun turns its rays, glowing beads of current run calmly along the line, and today's disc sends out soft ripples:
 
 | Light | Dark |
 |---|---|
@@ -204,13 +204,13 @@ A white day: the current flows faster and a light sweeps over today's disc:
 |---|---|
 | <img src="https://raw.githubusercontent.com/juju35/ha-tempo-card/main/screenshots/white-day.gif" alt="white day animation" width="400"> | <img src="https://raw.githubusercontent.com/juju35/ha-tempo-card/main/screenshots/white-day-dark.gif" alt="white day animation dark" width="400"> |
 
-A red day at peak hours: the current races in red, a warning bolt flashes on the house and today's disc pulses:
+A red day at peak hours: the current races in red, a warning badge flashes on the roof and today's disc pulses:
 
 | Dark | Light |
 |---|---|
 | <img src="https://raw.githubusercontent.com/juju35/ha-tempo-card/main/screenshots/red-day.gif" alt="red day animation" width="400"> | <img src="https://raw.githubusercontent.com/juju35/ha-tempo-card/main/screenshots/red-day-light.gif" alt="red day animation light" width="400"> |
 
-Off-peak hours at night: the moon shines among twinkling stars, the window glows and the current slows down:
+Off-peak hours at night: the moon glows among twinkling stars, the windows light up and the current slows down:
 
 | Dark | Light |
 |---|---|

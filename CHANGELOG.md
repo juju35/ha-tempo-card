@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.3 - 2026-11-14
+
+### Changes
+- Redrawn scene, in the style of the appliances of the other cards: a steel pylon with its insulators, a house with a lit front, a shaded side, dark glass windows and a Linky meter, and a glow on the floor in the color of the day (golden off-peak). The current runs as glowing beads, the sun has a soft halo, the moon is a crescent with its halo, and the warning on a red day at peak hours is a badge on the roof. Every animation still loops in 2.4 s and stops with `prefers-reduced-motion`.
+
 ## 1.0.2 - 2026-11-14
 
 ### Fixes
