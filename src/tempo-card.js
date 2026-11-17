@@ -86,6 +86,11 @@ const STRINGS = {
     days_left_entities: "Days left entities",
     language: "Language",
     lang_auto: "Auto (Home Assistant)",
+    illustration: "Animated illustration",
+    illustration_theme: "Illustration theme",
+    theme_auto: "Automatic (sun or dark theme)",
+    theme_day: "Day",
+    theme_night: "Night",
   },
   fr: {
     card_title: "EDF Tempo",
@@ -133,6 +138,11 @@ const STRINGS = {
     days_left_entities: "Entités des jours restants",
     language: "Langue",
     lang_auto: "Auto (Home Assistant)",
+    illustration: "Illustration animée",
+    illustration_theme: "Thème de l’illustration",
+    theme_auto: "Automatique (soleil ou thème sombre)",
+    theme_day: "Jour",
+    theme_night: "Nuit",
   },
   de: {
     card_title: "EDF Tempo",
@@ -180,6 +190,11 @@ const STRINGS = {
     days_left_entities: "Entitäten der verbleibenden Tage",
     language: "Sprache",
     lang_auto: "Automatisch (Home Assistant)",
+    illustration: "Animierte Illustration",
+    illustration_theme: "Thema der Illustration",
+    theme_auto: "Automatisch (Sonne oder dunkles Design)",
+    theme_day: "Tag",
+    theme_night: "Nacht",
   },
   es: {
     card_title: "EDF Tempo",
@@ -227,6 +242,11 @@ const STRINGS = {
     days_left_entities: "Entidades de días restantes",
     language: "Idioma",
     lang_auto: "Automático (Home Assistant)",
+    illustration: "Ilustración animada",
+    illustration_theme: "Tema de la ilustración",
+    theme_auto: "Automático (sol o tema oscuro)",
+    theme_day: "Día",
+    theme_night: "Noche",
   },
   it: {
     card_title: "EDF Tempo",
@@ -274,6 +294,11 @@ const STRINGS = {
     days_left_entities: "Entità dei giorni rimanenti",
     language: "Lingua",
     lang_auto: "Automatica (Home Assistant)",
+    illustration: "Illustrazione animata",
+    illustration_theme: "Tema dell’illustrazione",
+    theme_auto: "Automatico (sole o tema scuro)",
+    theme_day: "Giorno",
+    theme_night: "Notte",
   },
   nl: {
     card_title: "EDF Tempo",
@@ -321,6 +346,11 @@ const STRINGS = {
     days_left_entities: "Entiteiten resterende dagen",
     language: "Taal",
     lang_auto: "Automatisch (Home Assistant)",
+    illustration: "Geanimeerde illustratie",
+    illustration_theme: "Thema van de illustratie",
+    theme_auto: "Automatisch (zon of donker thema)",
+    theme_day: "Dag",
+    theme_night: "Nacht",
   },
   pt: {
     card_title: "EDF Tempo",
@@ -368,6 +398,11 @@ const STRINGS = {
     days_left_entities: "Entidades dos dias restantes",
     language: "Idioma",
     lang_auto: "Automático (Home Assistant)",
+    illustration: "Ilustração animada",
+    illustration_theme: "Tema da ilustração",
+    theme_auto: "Automático (sol ou tema escuro)",
+    theme_day: "Dia",
+    theme_night: "Noite",
   },
   pl: {
     card_title: "EDF Tempo",
@@ -415,6 +450,11 @@ const STRINGS = {
     days_left_entities: "Encje pozostałych dni",
     language: "Język",
     lang_auto: "Automatycznie (Home Assistant)",
+    illustration: "Animowana ilustracja",
+    illustration_theme: "Motyw ilustracji",
+    theme_auto: "Automatycznie (słońce lub ciemny motyw)",
+    theme_day: "Dzień",
+    theme_night: "Noc",
   },
   sr: {
     card_title: "EDF Tempo",
@@ -462,6 +502,11 @@ const STRINGS = {
     days_left_entities: "Ентитети преосталих дана",
     language: "Језик",
     lang_auto: "Аутоматски (Home Assistant)",
+    illustration: "Анимирана илустрација",
+    illustration_theme: "Тема илустрације",
+    theme_auto: "Аутоматски (сунце или тамна тема)",
+    theme_day: "Дан",
+    theme_night: "Ноћ",
   },
   "sr-Latn": {
     card_title: "EDF Tempo",
@@ -509,6 +554,11 @@ const STRINGS = {
     days_left_entities: "Entiteti preostalih dana",
     language: "Jezik",
     lang_auto: "Automatski (Home Assistant)",
+    illustration: "Animirana ilustracija",
+    illustration_theme: "Tema ilustracije",
+    theme_auto: "Automatski (sunce ili tamna tema)",
+    theme_day: "Dan",
+    theme_night: "Noć",
   },
   ro: {
     card_title: "EDF Tempo",
@@ -556,6 +606,11 @@ const STRINGS = {
     days_left_entities: "Entitățile zilelor rămase",
     language: "Limbă",
     lang_auto: "Automat (Home Assistant)",
+    illustration: "Ilustrație animată",
+    illustration_theme: "Tema ilustrației",
+    theme_auto: "Automat (soare sau temă întunecată)",
+    theme_day: "Zi",
+    theme_night: "Noapte",
   },
   da: {
     card_title: "EDF Tempo",
@@ -603,6 +658,11 @@ const STRINGS = {
     days_left_entities: "Entiteter for resterende dage",
     language: "Sprog",
     lang_auto: "Automatisk (Home Assistant)",
+    illustration: "Animeret illustration",
+    illustration_theme: "Illustrationens tema",
+    theme_auto: "Automatisk (sol eller mørkt tema)",
+    theme_day: "Dag",
+    theme_night: "Nat",
   },
   sv: {
     card_title: "EDF Tempo",
@@ -650,6 +710,11 @@ const STRINGS = {
     days_left_entities: "Entiteter för återstående dagar",
     language: "Språk",
     lang_auto: "Automatiskt (Home Assistant)",
+    illustration: "Animerad illustration",
+    illustration_theme: "Illustrationens tema",
+    theme_auto: "Automatiskt (sol eller mörkt tema)",
+    theme_day: "Dag",
+    theme_night: "Natt",
   },
   bg: {
     card_title: "EDF Tempo",
@@ -697,6 +762,11 @@ const STRINGS = {
     days_left_entities: "Обекти за оставащите дни",
     language: "Език",
     lang_auto: "Автоматично (Home Assistant)",
+    illustration: "Анимирана илюстрация",
+    illustration_theme: "Тема на илюстрацията",
+    theme_auto: "Автоматично (слънце или тъмна тема)",
+    theme_day: "Ден",
+    theme_night: "Нощ",
   },
   ru: {
     card_title: "EDF Tempo",
@@ -744,6 +814,11 @@ const STRINGS = {
     days_left_entities: "Объекты оставшихся дней",
     language: "Язык",
     lang_auto: "Автоматически (Home Assistant)",
+    illustration: "Анимированная иллюстрация",
+    illustration_theme: "Тема иллюстрации",
+    theme_auto: "Автоматически (солнце или тёмная тема)",
+    theme_day: "День",
+    theme_night: "Ночь",
   },
   uk: {
     card_title: "EDF Tempo",
@@ -791,6 +866,11 @@ const STRINGS = {
     days_left_entities: "Об'єкти днів, що залишились",
     language: "Мова",
     lang_auto: "Автоматично (Home Assistant)",
+    illustration: "Анімована ілюстрація",
+    illustration_theme: "Тема ілюстрації",
+    theme_auto: "Автоматично (сонце або темна тема)",
+    theme_day: "День",
+    theme_night: "Ніч",
   },
   hu: {
     card_title: "EDF Tempo",
@@ -838,6 +918,11 @@ const STRINGS = {
     days_left_entities: "Hátralévő napok entitásai",
     language: "Nyelv",
     lang_auto: "Automatikus (Home Assistant)",
+    illustration: "Animált illusztráció",
+    illustration_theme: "Az illusztráció témája",
+    theme_auto: "Automatikus (nap vagy sötét téma)",
+    theme_day: "Nappal",
+    theme_night: "Éjszaka",
   },
   sk: {
     card_title: "EDF Tempo",
@@ -885,6 +970,11 @@ const STRINGS = {
     days_left_entities: "Entity zostávajúcich dní",
     language: "Jazyk",
     lang_auto: "Automaticky (Home Assistant)",
+    illustration: "Animovaná ilustrácia",
+    illustration_theme: "Téma ilustrácie",
+    theme_auto: "Automaticky (slnko alebo tmavá téma)",
+    theme_day: "Deň",
+    theme_night: "Noc",
   },
   cs: {
     card_title: "EDF Tempo",
@@ -932,6 +1022,11 @@ const STRINGS = {
     days_left_entities: "Entity zbývajících dnů",
     language: "Jazyk",
     lang_auto: "Automaticky (Home Assistant)",
+    illustration: "Animovaná ilustrace",
+    illustration_theme: "Motiv ilustrace",
+    theme_auto: "Automaticky (slunce nebo tmavý motiv)",
+    theme_day: "Den",
+    theme_night: "Noc",
   },
   sl: {
     card_title: "EDF Tempo",
@@ -979,6 +1074,11 @@ const STRINGS = {
     days_left_entities: "Entitete preostalih dni",
     language: "Jezik",
     lang_auto: "Samodejno (Home Assistant)",
+    illustration: "Animirana ilustracija",
+    illustration_theme: "Tema ilustracije",
+    theme_auto: "Samodejno (sonce ali temna tema)",
+    theme_day: "Dan",
+    theme_night: "Noč",
   },
   lv: {
     card_title: "EDF Tempo",
@@ -1026,6 +1126,11 @@ const STRINGS = {
     days_left_entities: "Atlikušo dienu entītijas",
     language: "Valoda",
     lang_auto: "Automātiski (Home Assistant)",
+    illustration: "Animēta ilustrācija",
+    illustration_theme: "Ilustrācijas motīvs",
+    theme_auto: "Automātiski (saule vai tumšais motīvs)",
+    theme_day: "Diena",
+    theme_night: "Nakts",
   },
   el: {
     card_title: "EDF Tempo",
@@ -1073,6 +1178,11 @@ const STRINGS = {
     days_left_entities: "Οντότητες υπόλοιπων ημερών",
     language: "Γλώσσα",
     lang_auto: "Αυτόματα (Home Assistant)",
+    illustration: "Κινούμενη εικονογράφηση",
+    illustration_theme: "Θέμα εικονογράφησης",
+    theme_auto: "Αυτόματο (ήλιος ή σκούρο θέμα)",
+    theme_day: "Ημέρα",
+    theme_night: "Νύχτα",
   },
 };
 
@@ -1429,7 +1539,7 @@ const BASE_STYLE = `
           display: block; min-width: 0; --tc-natural-width: 360px; }
   /* A size container has no width of its own content: this empty grid gives the card a natural width without a minimum. */
   :host::before { content: ""; display: grid; grid-template-columns: minmax(0, var(--tc-natural-width)); height: 0; }
-  ha-card { overflow: hidden; container-type: inline-size; }
+  ha-card { overflow: hidden; container: tc-card / inline-size; }
   .icon { width: 18px; height: 18px; fill: currentColor; flex: none; }
   .clickable { cursor: pointer; }
   [role="button"]:focus-visible, button:focus-visible { outline: 2px solid var(--primary-color, var(--tc-accent)); outline-offset: 2px; border-radius: 6px; }
@@ -1442,15 +1552,29 @@ const BASE_STYLE = `
   .type-icon { position: relative; width: 40px; height: 40px; border-radius: 50%; display: flex; flex: none; align-items: center; justify-content: center;
                background: color-mix(in srgb, var(--c, var(--tc-accent)) 16%, transparent); transition: background-color .3s ease; }
   .type-icon .icon { width: 24px; height: 24px; fill: color-mix(in srgb, var(--c, var(--tc-accent)) 70%, var(--primary-text-color)); }
-  .titles { flex: 1 1 0; min-width: 5ch; }
-  :host([hide-title]) .titles > .name, :host([hide-subtitle]) .titles > .sub { display: none; }
+  /* Off-peak hours: the same color, lighter. */
+  .type-icon.p-hc .icon { fill: color-mix(in srgb, var(--c, var(--tc-accent)) 50%, var(--secondary-text-color)); }
+  .titles { flex: 1 1 0; min-width: 5ch; display: flex; flex-direction: column; }
+  :host([hide-title]) .titles .name, :host([hide-subtitle]) .titles > .sub { display: none; }
   .name { font-size: 16px; font-weight: 500; line-height: 1.25; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .sub { font-size: 12px; color: var(--secondary-text-color); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .chip { display: inline-flex; align-items: center; gap: 4px; padding: 1px 8px; border-radius: 12px; font-size: 11px; font-weight: 500; white-space: nowrap;
-          align-self: flex-start; margin-top: 2px; background: color-mix(in srgb, var(--c) 15%, transparent);
-          color: color-mix(in srgb, var(--c) 55%, var(--primary-text-color)); flex: 0 1 auto; min-width: 0; max-width: 50%; overflow: hidden; box-sizing: border-box; }
+          background: color-mix(in srgb, var(--c) 15%, transparent);
+          color: color-mix(in srgb, var(--c) 55%, var(--primary-text-color)); flex: none; box-sizing: border-box; }
   .chip .icon { width: 14px; height: 14px; fill: var(--c); }
-  .chip-text { min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+  .chip-text { white-space: nowrap; }
+  /* The status pill (classic header and banner): on the title row, 8 px after the title, only when the whole title
+     and the pill's whole label fit there; otherwise on its own line under the subtitle, which then keeps one line.
+     Its dot (or icon) alone at 200 px or less, or when the banner has no room left for its label (pill-dot): the
+     label stays in its title and for screen readers. Measured after each render (_fitPill), in every language,
+     never by a fixed width. */
+  .trow { display: flex; align-items: center; gap: 8px; min-width: 0; }
+  .trow .name { flex: 0 1 auto; min-width: 0; }
+  .titles.pill-below .trow { display: contents; }
+  .titles.pill-below .sub { order: 1; }
+  .titles.pill-below .chip { order: 2; align-self: flex-start; margin-top: 2px; }
+  .titles.pill-dot .chip { padding: 4px; }
+  .titles.pill-dot .chip-text { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
   .warning { padding: 16px; color: var(--secondary-text-color); }
   .disc { position: relative; flex: none; width: 44px; height: 44px; border-radius: 50%; background: var(--disc); box-sizing: border-box;
           box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--c) 35%, transparent); }
@@ -1478,13 +1602,13 @@ const BASE_STYLE = `
           display: grid; place-items: center; color: var(--secondary-text-color); }
   .zoom .icon { width: 16px; height: 16px; }
   .zoom:hover { background: color-mix(in srgb, var(--tc-idle) 16%, transparent); color: var(--primary-text-color); }
-  @container (max-width: 330px) {
+  @container tc-card (max-width: 330px) {
     .sub-k { display: none; }
   }
-  @container (max-width: 230px) {
-    .chip { padding: 4px; flex: none; }
-    .chip-text { display: none; }
-    .header { gap: 6px; }
+  @container tc-card (max-width: 230px) { .header { gap: 6px; } }
+  @container tc-card (max-width: 200px) {
+    .chip { padding: 4px; }
+    .chip-text { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
   }
 `;
 
@@ -1526,10 +1650,10 @@ const FULL_STYLE = `
   .rows .v { text-align: right; font-weight: 500; white-space: nowrap; }
   .rows.cost { grid-template-columns: 10px minmax(0, 1fr) auto auto; }
   .rows.cost .kwh { text-align: right; color: var(--secondary-text-color); white-space: nowrap; }
-  @container (max-width: 230px) {
+  @container tc-card (max-width: 230px) {
     .picture { display: none; }
   }
-  @container (max-width: 330px) {
+  @container tc-card (max-width: 330px) {
     .picture { width: 84px; height: 70px; }
     .hero { gap: 8px; }
     .rows { grid-template-columns: 10px minmax(0, 1fr) auto; }
@@ -1551,7 +1675,7 @@ const MINI_STYLE = `
   .line { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--secondary-text-color); min-width: 0; }
   .line .icon { width: 16px; height: 16px; fill: var(--c); }
   .line span { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-  @container (max-width: 220px) {
+  @container tc-card (max-width: 220px) {
     .pills { grid-template-columns: minmax(0, 1fr); }
   }
 `;
@@ -1570,8 +1694,13 @@ const SUN_RAYS = Array.from({ length: 12 }, (_, i) => {
 const SPARKLE = (x, y, r) =>
   `M${x} ${y - r}Q${x} ${y} ${x + r} ${y}Q${x} ${y} ${x} ${y + r}Q${x} ${y} ${x - r} ${y}Q${x} ${y} ${x} ${y - r}Z`;
 const WIRE = "M43.5 38.5Q60 64 75.5 68";
-const sceneSvg = (color, period) =>
-  `<svg class="scene c-${color || "unknown"} p-${period}" viewBox="0 0 120 100" aria-hidden="true"><defs>` +
+// In the banner (`banner`), the picture is framed down to the pylon's feet and widened to the left, where the line
+// comes in from afar and carries the current too. `uid` keeps the ids of each card's gradients apart on a page with
+// several cards.
+const LEAD = "M16.5 40.5Q-16 44 -58 74";
+const sceneSvg = (color, period, uid = "0", banner = false) =>
+  (
+    `<svg class="scene c-${color || "unknown"} p-${period}" viewBox="${banner ? "-60 -1 180 91" : "0 0 120 100"}" aria-hidden="true"><defs>` +
   '<radialGradient id="tc-floor" cx=".5" cy=".5" r=".5"><stop offset="0" class="floor-stop" stop-opacity=".45"/><stop offset="1" class="floor-stop" stop-opacity="0"/></radialGradient>' +
   '<linearGradient id="tc-steel" gradientUnits="userSpaceOnUse" x1="18" y1="0" x2="42" y2="0"><stop offset="0" stop-color="#8d98a5"/><stop offset=".45" stop-color="#c9d0d8"/><stop offset="1" stop-color="#7d8894"/></linearGradient>' +
   '<linearGradient id="tc-front" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#dfe4ea"/></linearGradient>' +
@@ -1591,34 +1720,37 @@ const sceneSvg = (color, period) =>
     : '<g class="day"><circle class="halo" cx="97" cy="17" r="18" fill="url(#tc-halo)"/>' +
       `<g transform="translate(97 17)"><path class="rays" d="${SUN_RAYS}"/><circle r="6.8" fill="url(#tc-sun)"/></g></g>`) +
   // The pylon: steel lattice, cross arms, dark glass insulators, feet.
-  '<g class="pylon"><path class="legs" d="M30 25L21.5 88M30 25L38.5 88"/>' +
+  '<g class="pylon" stroke="url(#tc-steel)"><path class="legs" d="M30 25L21.5 88M30 25L38.5 88"/>' +
   '<path class="lattice" d="M23.2 76H36.8M24.6 64H35.4M26 53H34M27.2 44H32.8M23.2 76L35.4 64M36.8 76L24.6 64M24.6 64L34 53M35.4 64L26 53M26 53L32.8 44M34 53L27.2 44"/>' +
   '<path class="arms" d="M16.5 37H43.5M28 37L30 31.5L32 37M19.5 47H40.5"/></g>' +
-  '<g class="insulators"><rect x="15.6" y="37.4" width="1.8" height="3.2" rx=".9"/><rect x="42.6" y="37.4" width="1.8" height="3.2" rx=".9"/>' +
+  '<g class="insulators" fill="url(#tc-glass)"><rect x="15.6" y="37.4" width="1.8" height="3.2" rx=".9"/><rect x="42.6" y="37.4" width="1.8" height="3.2" rx=".9"/>' +
   '<rect x="18.6" y="47.4" width="1.8" height="3" rx=".9"/><rect x="39.6" y="47.4" width="1.8" height="3" rx=".9"/></g>' +
   '<rect class="foot" x="18.5" y="87" width="6" height="3" rx="1"/><rect class="foot" x="35.5" y="87" width="6" height="3" rx="1"/>' +
   // The line and the current.
-  '<path class="wire" d="M16.5 40.5Q10 52 2 54"/>' +
+  (banner
+      ? `<path class="wire" d="${LEAD}"/><path class="flow glow" d="${LEAD}" filter="url(#tc-blur)"/><path class="flow beads" d="${LEAD}"/>`
+      : '<path class="wire" d="M16.5 40.5Q10 52 2 54"/>') +
   `<path class="wire" d="${WIRE}"/><path class="flow glow" d="${WIRE}" filter="url(#tc-blur)"/><path class="flow beads" d="${WIRE}"/>` +
   // The house: a lit front, a shaded side, a roof in the color of the day, dark glass windows that light up at night.
   '<g class="house">' +
-  '<rect class="chimney" x="105.5" y="48.5" width="5" height="9" rx=".6"/><rect class="chimney-cap" x="104.8" y="47.5" width="6.4" height="2" rx=".6"/>' +
+  '<rect class="chimney" fill="url(#tc-side)" x="105.5" y="48.5" width="5" height="9" rx=".6"/><rect class="chimney-cap" x="104.8" y="47.5" width="6.4" height="2" rx=".6"/>' +
   '<path class="side" d="M96 64H113V88H96Z" fill="url(#tc-side)"/>' +
   '<path class="roof" d="M85 50.5H103.5L117 65H98.5Z"/><path class="sheen" d="M85 50.5H103.5L117 65H98.5Z" fill="url(#tc-sheen)"/>' +
   '<path class="tiles" d="M88.4 54.2H107M91.8 57.8H110.4M95.2 61.4H113.7"/>' +
   '<path class="front" d="M74.5 65L85 54L95.5 65V88H74.5Z" fill="url(#tc-front)"/>' +
   '<path class="roof-edge" d="M72 66.5L85 50.5L98.5 65"/>' +
-  '<circle class="glass attic" cx="85" cy="62" r="2.2"/>' +
+  '<circle fill="url(#tc-glass)" class="glass attic" cx="85" cy="62" r="2.2"/>' +
   '<path class="door" d="M81 88V79.5a4 4 0 0 1 8 0V88Z"/><circle class="knob" cx="87.3" cy="84" r=".55"/>' +
-  '<rect class="glass w1" x="99" y="69.5" width="5.5" height="7" rx=".9"/><rect class="glass w2" x="106.5" y="69.5" width="5" height="7" rx=".9"/>' +
+  '<rect fill="url(#tc-glass)" class="glass w1" x="99" y="69.5" width="5.5" height="7" rx=".9"/><rect fill="url(#tc-glass)" class="glass w2" x="106.5" y="69.5" width="5" height="7" rx=".9"/>' +
   '<path class="mullion" d="M101.75 69.5V76.5M99 73H104.5M109 69.5V76.5M106.5 73H111.5"/>' +
   '<rect class="meter" x="77" y="72" width="3.4" height="5" rx=".7"/><circle class="led" cx="78.7" cy="73.6" r=".55"/>' +
   '<rect class="plinth" x="73.5" y="87" width="40.5" height="2.4" rx="1"/>' +
-  '<path class="hook" d="M74.5 68H76.5"/><circle class="hook-cap" cx="75.6" cy="68" r=".9"/>' +
+  '<path class="hook" d="M74.5 68H76.5"/><circle class="hook-cap" fill="url(#tc-glass)" cx="75.6" cy="68" r=".9"/>' +
   "</g>" +
   '<g class="warn"><circle class="warn-ring" cx="101" cy="41" r="6.5"/><circle class="warn-dot" cx="101" cy="41" r="6"/>' +
   '<path class="warn-bolt" d="M102 36.6L98.6 41.8H101L100 45.4L103.4 40.2H101Z"/></g>' +
-  "</svg>";
+  "</svg>"
+  ).replace(/#tc-(floor|steel|front|side|sheen|glass|sun|halo|crescent|blur)\b|id="tc-(floor|steel|front|side|sheen|glass|sun|halo|crescent|blur)\b/g, (m) => `${m}-${uid}`);
 
 const SCENE_STYLE = `
   .scene { width: 100%; height: 100%; display: block; overflow: visible; }
@@ -1631,9 +1763,8 @@ const SCENE_STYLE = `
   .scene .moon { fill: #ffe7a3; } .scene .crater { fill: #f2c94c; opacity: .6; }
   .scene .star { fill: #ffd54f; transform-box: fill-box; transform-origin: center; animation: tc-twinkle 2.4s ease-in-out infinite; }
   .scene .star.s2 { animation-delay: -.8s; } .scene .star.s3 { animation-delay: -1.6s; }
-  .scene .pylon path { fill: none; stroke: url(#tc-steel); stroke-linecap: round; stroke-linejoin: round; }
+  .scene .pylon path { fill: none; stroke-linecap: round; stroke-linejoin: round; }
   .scene .pylon .legs { stroke-width: 2; } .scene .pylon .lattice { stroke-width: .9; } .scene .pylon .arms { stroke-width: 1.6; }
-  .scene .insulators rect { fill: url(#tc-glass); }
   .scene .foot { fill: #9aa5b1; }
   .scene .wire { fill: none; stroke: #b6bfc9; stroke-width: 1.3; stroke-linecap: round; }
   .scene .flow { fill: none; stroke-linecap: round; stroke-dasharray: 0 6; animation: tc-flow 1.2s linear infinite; }
@@ -1653,13 +1784,12 @@ const SCENE_STYLE = `
   .scene.c-white .roof, .scene.c-white .roof-edge { stroke: #9aa5b1; }
   .scene.c-unknown .roof { fill: #d3d9e0; } .scene.c-unknown .roof, .scene.c-unknown .roof-edge { stroke: #9aa5b1; }
   .scene .tiles { fill: none; stroke: #000; stroke-width: .5; opacity: .12; }
-  .scene .chimney { fill: url(#tc-side); stroke: #c3cad2; stroke-width: .8; } .scene .chimney-cap { fill: #9aa5b1; }
-  .scene .glass { fill: url(#tc-glass); }
+  .scene .chimney { stroke: #c3cad2; stroke-width: .8; } .scene .chimney-cap { fill: #9aa5b1; }
   .scene .mullion { stroke: #c3cad2; stroke-width: .6; }
   .scene .door { fill: #9aa5b1; } .scene .knob { fill: #e8edf2; }
   .scene .meter { fill: #c9e265; stroke: #8fa53b; stroke-width: .5; } .scene .led { fill: var(--tc-ok); }
   .scene .plinth { fill: #9aa5b1; }
-  .scene .hook { stroke: #9aa5b1; stroke-width: 1; stroke-linecap: round; } .scene .hook-cap { fill: url(#tc-glass); }
+  .scene .hook { stroke: #9aa5b1; stroke-width: 1; stroke-linecap: round; }
   .scene.p-hc .glass:not(.hook-cap) { fill: #ffd54f; animation: tc-glow 2.4s ease-in-out infinite; }
   .scene.p-hc .glass.w2 { animation-delay: -1.2s; }
   .scene .warn { display: none; }
@@ -1674,6 +1804,88 @@ const SCENE_STYLE = `
   @keyframes tc-ping { from { transform: scale(1); opacity: .8; } to { transform: scale(1.5); opacity: 0; } }
   @keyframes tc-breathe { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(.85); opacity: .65; } }
   @keyframes tc-twinkle { 0%, 100% { opacity: .35; transform: scale(.6); } 50% { opacity: 1; transform: scale(1.1); } }
+`;
+
+// The illustrated header: the sky (day, or night after sunset), a hill, the pylon feeding the house of the hero
+// picture on the right, and a 10 px strip of lawn under the whole banner, edge to edge. The text sits on the sky at
+// the left, over the far end of the line. The icon's color always tells the status: the color of the day, deep at
+// peak hours and light off-peak, grey while the day is unknown.
+const SKY_STARS = [
+  [18, 10],
+  [64, 22],
+  [118, 8],
+  [150, 30],
+  [176, 14],
+  [212, 26],
+  [238, 6],
+  [262, 34],
+  [290, 12],
+  [312, 28],
+];
+const CLOUD = (x, y, k) =>
+  `<g transform="translate(${x} ${y}) scale(${k})"><path class="tc-cloud" d="M-14 4C-17 4-18 0-14.5-1-14-5-8-6-6-3-4-8 4-8 5-2 9-3 12 0 10 4Z"/></g>`;
+const skySvg = () =>
+  '<svg class="tc-sky" viewBox="0 0 320 80" preserveAspectRatio="xMaxYMax meet" aria-hidden="true">' +
+  `<g class="tc-stars">${SKY_STARS.map(([x, y], i) => `<circle class="tc-star${i % 3 ? "" : " tw"}" cx="${x}" cy="${y}" r=".7"/>`).join("")}</g>` +
+  `<g class="tc-clouds">${CLOUD(150, 22, 1)}${CLOUD(214, 34, 0.75)}${CLOUD(120, 46, 0.6)}</g>` +
+  '<path class="tc-hill far" d="M96 80C150 68 196 62 250 64S300 70 320 68V80Z"/>' +
+  '<path class="tc-hill" d="M150 80C200 74 250 72 320 73V80Z"/>' +
+  "</svg>";
+
+const BANNER_STYLE = `
+  .banner { position: relative; overflow: hidden; height: var(--tc-banner-h, 90px); color: #10283f;
+            background: linear-gradient(90deg, #f1f8ff 0%, #e2f1fd 34%, #b9def8 70%, #9fd0f3 100%); }
+  .banner.night { color: #fff; background: linear-gradient(90deg, #1b2f52 0%, #15284a 36%, #0f1f3d 72%, #0a1830 100%); }
+  .tc-sky { position: absolute; left: 0; top: 0; width: 100%; height: calc(100% - var(--tc-ground-h, 10px)); }
+  .tc-stars { display: none; } .night .tc-stars { display: inline; } .night .tc-clouds { display: none; }
+  .tc-star { fill: #fff; opacity: .8; } .tc-star.tw { animation: tc-twinkle-sky 3.2s ease-in-out infinite alternate; }
+  .tc-cloud { fill: #fff; opacity: .9; animation: tc-drift 4.8s ease-in-out infinite alternate; }
+  .tc-hill { fill: #a7d39f; } .tc-hill.far { fill: #c6e4bd; }
+  .night .tc-hill { fill: #1d3a4a; } .night .tc-hill.far { fill: #1a3150; }
+  /* The lawn: a 10 px strip under the whole banner; the glow of the day's color under the house spills over it. */
+  .tc-ground { position: absolute; left: 0; right: 0; bottom: 0; height: var(--tc-ground-h, 10px);
+               background: repeating-linear-gradient(90deg, #5aa83d 0 22px, #6cbb4c 22px 44px); }
+  .night .tc-ground { background: repeating-linear-gradient(90deg, #1f4a2a 0 22px, #245433 22px 44px); }
+  /* The picture (viewBox 180 × 91, the pylon's feet at its bottom) stands on the strip. */
+  .tc-art { position: absolute; right: 6px; bottom: var(--tc-ground-h, 10px); height: calc(var(--tc-banner-h, 90px) - var(--tc-ground-h, 10px) - 2px);
+            aspect-ratio: 180 / 91; }
+  .banner .scene .wire { stroke: #9aa7b4; }
+  .night .scene .wire { stroke: #6f7f92; }
+  .night .scene .house { filter: brightness(.92); }
+  .htext { position: absolute; z-index: 1; left: 12px; top: 0; bottom: var(--tc-ground-h, 10px); right: var(--tc-text-right, 104px);
+           display: flex; align-items: center; gap: 10px; min-width: 0; }
+  .htext .titles { flex: 1 1 auto; min-width: 0; gap: 1px; justify-content: center; }
+  .banner .name { font-weight: 600; }
+  .banner .sub { color: #3d5670; }
+  .night .sub { color: rgba(255,255,255,.82); }
+  .banner .type-icon { background: rgba(255,255,255,.62); box-shadow: inset 0 0 0 1px rgba(47,125,225,.18); }
+  .banner.night .type-icon { background: rgba(255,255,255,.12); box-shadow: inset 0 0 0 1px rgba(255,255,255,.14); }
+  .banner .type-icon .icon { fill: var(--tc-ic); }
+  .banner .type-icon.c-blue { --tc-ic: #2563eb; } .banner .type-icon.c-blue.p-hc { --tc-ic: #6ea2f5; }
+  .banner .type-icon.c-white { --tc-ic: #64748b; } .banner .type-icon.c-white.p-hc { --tc-ic: #a3afbf; }
+  .banner .type-icon.c-red { --tc-ic: #dc2626; } .banner .type-icon.c-red.p-hc { --tc-ic: #f08080; }
+  .banner .type-icon.c-unknown { --tc-ic: #9aa3ad; }
+  .night .type-icon.c-blue { --tc-ic: #7fb0ff; } .night .type-icon.c-blue.p-hc { --tc-ic: #4f7fc9; }
+  .night .type-icon.c-white { --tc-ic: #f1f5f9; } .night .type-icon.c-white.p-hc { --tc-ic: #a3afbf; }
+  .night .type-icon.c-red { --tc-ic: #ff6b6b; } .night .type-icon.c-red.p-hc { --tc-ic: #c45a5a; }
+  .night .type-icon.c-unknown { --tc-ic: #7c8693; }
+  .banner .type-icon.c-red.p-hp { animation: tc-pulse 1.2s ease-in-out infinite; }
+  /* The status pill on the sky: the day's color on frosted glass. */
+  .banner .chip { padding: 1px 8px; border-radius: 12px; font-size: 11px; font-weight: 500;
+                  line-height: 16px; background: color-mix(in srgb, var(--c) 18%, rgba(255,255,255,.78)); color: color-mix(in srgb, var(--c) 45%, #0d2a45); }
+  .banner.night .chip { background: color-mix(in srgb, var(--c) 30%, rgba(8,18,38,.55)); color: color-mix(in srgb, var(--c) 35%, #ffffff); }
+  .banner .chip .dot { width: 7px; height: 7px; border-radius: 50%; flex: none; background: var(--disc); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--c) 60%, transparent); }
+  .banner.zoomable { --tc-text-right: 128px; } .banner.zoomable .tc-art { right: 30px; }
+  .banner .zoom { position: absolute; z-index: 2; top: 5px; right: 5px; margin: 0; color: #33506b; background: rgba(255,255,255,.55);
+                  box-shadow: inset 0 0 0 1px rgba(255,255,255,.7); backdrop-filter: blur(4px); }
+  .banner .zoom:hover { background: rgba(255,255,255,.75); color: #33506b; }
+  .banner.night .zoom { color: #ffffff; background: rgba(255,255,255,.12); box-shadow: inset 0 0 0 1px rgba(255,255,255,.2); }
+  .banner.night .zoom:hover { background: rgba(255,255,255,.22); color: #ffffff; }
+  @keyframes tc-drift { to { transform: translateX(4px); } }
+  @keyframes tc-twinkle-sky { from { opacity: .3; } to { opacity: 1; } }
+  /* Narrow card: no room for the picture beside the text, the sky alone stays. */
+  @container tc-card (max-width: 250px) { .tc-art { display: none; } .htext { right: 36px; } }
+  @media (prefers-reduced-motion: reduce) { .tc-cloud, .tc-star, .banner .type-icon, .banner .scene * { animation: none !important; } }
 `;
 
 // ---------------------------------------------------------------------------
@@ -1774,9 +1986,27 @@ const holdUnderPress = (card, render) => {
 // Whether the focus goes back to `el` after a rewrite (see holdUnderPress).
 const keepsFocus = (card, el) => !card._byPointer || typeof el?.selectionStart === "number";
 
+// Night picture: forced by illustration_theme, else the sun below the horizon or Home Assistant's dark theme (dark mode alone without a usable sun).
+const isNight = (hass, config) => {
+  const theme = config?.illustration_theme;
+  if (theme === "night") return true;
+  if (theme === "day") return false;
+  const sun = hass?.states?.["sun.sun"];
+  if (sun && valid(sun)) return sun.state === "below_horizon" || !!hass?.themes?.darkMode;
+  return !!hass?.themes?.darkMode;
+};
+
+let tcUid = 0;
+
+// The banner's ground strip (the lawn), that the title block keeps clear of, and the gap between the title and the
+// status pill on its row (.trow).
+const PILL_GROUND_PX = 10;
+const PILL_GAP_PX = 8;
+
 class TempoCard extends HTMLElement {
   constructor() {
     super();
+    this._uid = ++tcUid;
     this.attachShadow({ mode: "open" });
     this._html = "";
     holdUnderPress(this, () => this._update());
@@ -1836,7 +2066,7 @@ class TempoCard extends HTMLElement {
     const s = sourcesOf(h, this._config);
     const ids = Object.values(s).map((x) => x?.entity);
     // The minute: countdown, period and Tempo day move on their own.
-    return [h.entities, h.language, h.locale, h.themes?.darkMode, h.config?.time_zone, Math.floor(this._now() / 60000), this._stats, ...ids.map((id) => id && h.states[id])];
+    return [h.entities, h.language, h.locale, h.themes?.darkMode, h.states["sun.sun"], h.config?.time_zone, Math.floor(this._now() / 60000), this._stats, ...ids.map((id) => id && h.states[id])];
   }
 
   connectedCallback() {
@@ -1847,6 +2077,7 @@ class TempoCard extends HTMLElement {
       this._update();
     });
     this._outside.on();
+    this._watchPill();
     // Back on the page after leaving it: rendered again in its default state.
     if (this._hass && this._config) this._update();
     clearInterval(this._tick);
@@ -1859,10 +2090,58 @@ class TempoCard extends HTMLElement {
     clearInterval(this._tick);
     this._tick = null;
     this._outside?.off();
+    this._unwatchPill();
     this._dropPress();
     // Left (another dashboard view, a conditional card hidden): back to the defaults, so that the card does not
     // come back unfolded.
     this._toggled = new Map();
+  }
+
+  // The status pill goes on the title row, right after the title, only when the whole title and the pill's whole
+  // label fit there; otherwise it takes its own line under the subtitle (the subtitle then on one line). In the
+  // banner, when title, subtitle and pill still do not fit above the ground strip (or the pill's label runs past the
+  // text, over the picture), the pill keeps its dot only.
+  // Measured after each render and on every new width (or once the web font is loaded), never by a fixed width.
+  _fitPill() {
+    for (const t of this.shadowRoot?.querySelectorAll?.(".titles") || []) {
+      const row = t.querySelector?.(".trow");
+      const name = row?.querySelector(".name");
+      const chips = row ? [...row.children].filter((n) => n.classList.contains("chip")) : [];
+      if (!name?.getBoundingClientRect || !chips.length) continue;
+      t.classList.remove("pill-below", "pill-dot");
+      // The title's whole width (scrollWidth is rounded: 1 px more, so that a title that fits is never cut).
+      const need = chips.reduce((w, c) => w + PILL_GAP_PX + c.getBoundingClientRect().width, name.scrollWidth + 1);
+      if (need <= row.getBoundingClientRect().width + 0.5) continue;
+      t.classList.add("pill-below");
+      const banner = t.closest(".banner");
+      if (!banner) continue;
+      const box = banner.getBoundingClientRect();
+      const ground = box.bottom - PILL_GROUND_PX;
+      const right = t.getBoundingClientRect().right;
+      const out = [name, ...t.querySelectorAll(".sub"), ...chips].some((n) => {
+        const r = n.getBoundingClientRect();
+        return r.height > 0 && (r.top < box.top - 0.5 || r.bottom > ground + 0.5 || r.right > right + 0.5);
+      });
+      if (out) t.classList.add("pill-dot");
+    }
+  }
+
+  _watchPill() {
+    if (typeof ResizeObserver !== "function") return;
+    this._pillResize ??= new ResizeObserver((entries) => {
+      const w = Math.round(entries.at(-1).contentRect.width);
+      if (w === this._pillWidth) return;
+      this._pillWidth = w;
+      cancelAnimationFrame(this._pillFrame);
+      this._pillFrame = requestAnimationFrame(() => this._fitPill());
+    });
+    this._pillResize.observe(this);
+    document.fonts?.ready?.then(() => this._fitPill());
+  }
+
+  _unwatchPill() {
+    this._pillResize?.disconnect();
+    this._pillWidth = null;
   }
 
   _now() {
@@ -1894,6 +2173,7 @@ class TempoCard extends HTMLElement {
     const kept = this._focusedSpot();
     this._html = html;
     this.shadowRoot.innerHTML = html;
+    this._fitPill();
     if (kept) this._focusables(kept.key)[kept.index]?.focus({ preventScroll: true });
   }
 
@@ -1989,7 +2269,7 @@ class TempoCard extends HTMLElement {
     if (c.show_period !== false) parts.push(this._periodSection(m));
     if (c.show_season !== false) parts.push(this._seasonSection(m));
     if (c.show_cost !== false) parts.push(this._costSection(m));
-    return `<style>${BASE_STYLE}${FULL_STYLE}${SCENE_STYLE}</style>
+    return `<style>${BASE_STYLE}${FULL_STYLE}${SCENE_STYLE}${this._illustrated() ? BANNER_STYLE : ""}</style>
       <ha-card>
         ${this._header(m)}
         <div class="content">${parts.filter(Boolean).join("")}</div>
@@ -2004,22 +2284,45 @@ class TempoCard extends HTMLElement {
     return this._t(p === "hc" ? "offpeak" : "peak");
   }
 
+  _illustrated() {
+    return this._config.illustration !== false;
+  }
+
+  // The illustration's styles (with the hero picture's), only when it is shown.
+  _bannerStyle() {
+    return this._illustrated() ? `${SCENE_STYLE}${BANNER_STYLE}` : "";
+  }
+
   _header(m) {
     const c = this._config;
     const cls = `c-${m.today || "unknown"}`;
+    const icls = `${cls} p-${m.period}`;
     // On a narrow card the label gives way to the price itself.
     const sub = m.price !== null ? `<span class="sub-k">${esc(this._t("current_price"))} · </span>${esc(fmtMoney(m.price, m.currency, this._locale(), 4))}/kWh` : "";
     const chipLabel = this._periodName(m.period);
     const chipEntity = m.s.period?.entity;
     const chipAttrs = chipEntity ? ` clickable" role="button" tabindex="0" data-entity="${esc(chipEntity)}` : "";
+    const icon = `<div class="type-icon ${icls}">${svgIcon(ICONS.bolt)}</div>`;
+    const subText = m.price !== null ? `${this._t("current_price")} · ${fmtMoney(m.price, m.currency, this._locale(), 4)}/kWh` : "";
+    const subDiv = sub ? `<div class="sub" title="${esc(subText)}">${sub}</div>` : "";
+    const chip = `<span class="chip ${cls}${chipAttrs}" title="${esc(chipLabel)}" aria-label="${esc(chipLabel)}">${svgIcon(m.period === "hc" ? ICONS.night : ICONS.sun)}<span class="chip-text">${esc(chipLabel)}</span></span>`;
+    if (this._illustrated()) {
+      // On the sky, the pill (a dot in the day's color and the period) follows the title on its row; on a narrow card
+      // it drops under the subtitle, and on a very narrow one only its dot stays (the label in its title).
+      const pill = `<span class="chip ${cls}${chipAttrs}" title="${esc(chipLabel)}" aria-label="${esc(chipLabel)}"><span class="dot"></span><span class="chip-text">${esc(chipLabel)}</span></span>`;
+      const bannerTitles = `<div class="trow"><div class="name">${esc(c.title || this._t("card_title"))}</div>${pill}</div>${subDiv}`;
+      const night = isNight(this._hass, c) ? " night" : "";
+      const zoom = this._zoomButton();
+      return `
+      <div class="banner${night}${zoom ? " zoomable" : ""}">${skySvg()}<div class="tc-ground"></div><div class="tc-art">${sceneSvg(m.today, m.period, this._uid, true)}</div>
+        <div class="htext">${icon}<div class="titles">${bannerTitles}</div></div>
+        ${zoom}
+      </div>`;
+    }
     return `
       <div class="header">
-        <div class="type-icon ${cls}">${svgIcon(ICONS.bolt)}</div>
-        <div class="titles">
-          <div class="name">${esc(c.title || this._t("card_title"))}</div>
-          ${sub ? `<div class="sub">${sub}</div>` : ""}
-        </div>
-        <span class="chip ${cls}${chipAttrs}" title="${esc(chipLabel)}" aria-label="${esc(chipLabel)}">${svgIcon(m.period === "hc" ? ICONS.night : ICONS.sun)}<span class="chip-text">${esc(chipLabel)}</span></span>
+        ${icon}
+        <div class="titles"><div class="trow"><div class="name">${esc(c.title || this._t("card_title"))}</div>${chip}</div>${subDiv}</div>
         ${this._zoomButton()}
       </div>`;
   }
@@ -2046,7 +2349,9 @@ class TempoCard extends HTMLElement {
       `<div ${this._dayAttrs(key, m, color, "day")}>${this._disc(color)}<div class="day-text"><div class="k">${esc(this._t(key))}</div><div class="v">${esc(
         this._colorName(color),
       )}</div><div class="date">${esc(fmtDate(day, locale))}</div></div></div>`;
-    return `<div class="hero"><div class="picture">${sceneSvg(m.today, m.period)}</div><div class="days">${tile("today", m.today, m.day)}${tile(
+    // The banner shows the picture: the hero keeps it only under a classic header.
+    const picture = this._illustrated() ? "" : `<div class="picture">${sceneSvg(m.today, m.period, this._uid)}</div>`;
+    return `<div class="hero">${picture}<div class="days">${tile("today", m.today, m.day)}${tile(
       "tomorrow",
       m.tomorrow,
       addDays(m.day, 1),
@@ -2273,7 +2578,7 @@ class TempoMiniCard extends TempoCard {
     const line = m.end ? `<div class="line c-${m.today || "unknown"}">${svgIcon(m.period === "hc" ? ICONS.night : ICONS.sun)}<span>${esc(
       `${this._periodName(m.period)} · ${this._t("ends_in", { time: fmtDuration(m.end - m.now, locale) })}`,
     )}</span></div>` : "";
-    return `<style>${BASE_STYLE}${MINI_STYLE}</style>
+    return `<style>${BASE_STYLE}${MINI_STYLE}${this._bannerStyle()}</style>
       <ha-card>
         ${this._header(m)}
         <div class="content"><div class="pills">${pill("today", m.today)}${pill("tomorrow", m.tomorrow)}</div>${line}</div>
@@ -2285,11 +2590,11 @@ class TempoMiniCard extends TempoCard {
 // Visual editors (ha-form)
 // ---------------------------------------------------------------------------
 
-const DEFAULTS = { show_title: true, show_subtitle: true, show_period: true, show_season: true, show_cost: true, zoom: true, collapsed: [], currency: "EUR" };
+const DEFAULTS = { illustration: true, illustration_theme: "auto", show_title: true, show_subtitle: true, show_period: true, show_season: true, show_cost: true, zoom: true, collapsed: [], currency: "EUR" };
 
 class TempoCardEditor extends HTMLElement {
   static get toggles() {
-    return ["show_title", "show_subtitle", "show_period", "show_season", "show_cost"];
+    return ["illustration", "show_title", "show_subtitle", "show_period", "show_season", "show_cost"];
   }
 
   setConfig(config) {
@@ -2319,6 +2624,10 @@ class TempoCardEditor extends HTMLElement {
       { name: "offpeak_entity", selector: sensor },
       { name: "offpeak_hours", selector: { text: {} } },
       { type: "grid", name: "", schema: this.constructor.toggles.map((name) => ({ name, selector: { boolean: {} } })) },
+      {
+        name: "illustration_theme",
+        selector: { select: { mode: "dropdown", options: ["auto", "day", "night"].map((value) => ({ value, label: tr(`theme_${value}`) })) } },
+      },
       // The mini card too: its detail button shows the full card's content with this same configuration.
       {
         name: "collapsed",
@@ -2400,7 +2709,7 @@ const cleanConfig = (value) => {
 // The full card's sections too: the detail button shows the full card's content with this same configuration.
 class TempoMiniCardEditor extends TempoCardEditor {
   static get toggles() {
-    return ["show_title", "show_subtitle", "zoom", "show_period", "show_season", "show_cost"];
+    return ["illustration", "show_title", "show_subtitle", "zoom", "show_period", "show_season", "show_cost"];
   }
 }
 

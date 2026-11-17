@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.1.0 - 2026-11-17
+
+### Features
+- Illustrated header on both cards (90 px), in the style of the other cards: the title and the current price on a sky at the left, the pylon feeding the house on the right, standing on a 10 px lawn strip that runs edge to edge. The roof, the current and the glow take the color of the day; the sun shines at peak hours and the moon off-peak; the current comes in from afar and flows faster as the day gets dearer; the warning flashes on a red day at peak hours.
+- Night sky after sunset (`sun.sun`) or with the dark theme, forced with `illustration_theme: day | night`; `illustration: false` keeps the classic header (and the picture beside the days on the full card).
+- The header icon tells the status: the color of the day, deep at peak hours and light off-peak, grey while unknown; it pulses on a red day at peak hours.
+- New options in the visual editor of both cards.
+- The status pill (a dot in the day's color and the current period) sits on the title row right after the title only when the whole title and its whole label fit there (measured, in every language); otherwise on its own line under the subtitle (then kept to one line), and only its dot when even that does not fit in the banner above the lawn or beside the picture, or on a card 200 px wide or less. The same rule on the classic header. The mini card's detail button sits in the banner's top-right corner, in the frosted style of the other cards.
+- Night picture with the dark theme even while the sun is up (a day picture would glare on a dark dashboard); `illustration_theme: day | night` still forces one.
+
 ## 1.0.3 - 2026-11-14
 
 ### Changes
