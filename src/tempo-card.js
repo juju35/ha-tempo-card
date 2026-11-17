@@ -1848,7 +1848,7 @@ const BANNER_STYLE = `
   .night .tc-ground { background: repeating-linear-gradient(90deg, #1f4a2a 0 22px, #245433 22px 44px); }
   /* The picture (viewBox 180 × 91, the pylon's feet at its bottom) stands on the strip. */
   .tc-art { position: absolute; right: 6px; bottom: var(--tc-ground-h, 10px); height: calc(var(--tc-banner-h, 90px) - var(--tc-ground-h, 10px) - 2px);
-            aspect-ratio: 180 / 91; }
+            aspect-ratio: 180 / 91; width: calc((var(--tc-banner-h, 90px) - var(--tc-ground-h, 10px) - 2px) * 180 / 91); }
   .banner .scene .wire { stroke: #9aa7b4; }
   .night .scene .wire { stroke: #6f7f92; }
   .night .scene .house { filter: brightness(.92); }
