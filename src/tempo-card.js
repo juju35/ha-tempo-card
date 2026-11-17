@@ -1992,13 +1992,13 @@ const holdUnderPress = (card, render) => {
 // Whether the focus goes back to `el` after a rewrite (see holdUnderPress).
 const keepsFocus = (card, el) => !card._byPointer || typeof el?.selectionStart === "number";
 
-// Night picture: forced by illustration_theme, else the sun below the horizon, else Home Assistant's dark mode.
+// Night picture: forced by illustration_theme, else the sun below the horizon or Home Assistant's dark theme (dark mode alone without a usable sun).
 const isNight = (hass, config) => {
   const theme = config?.illustration_theme;
   if (theme === "night") return true;
   if (theme === "day") return false;
   const sun = hass?.states?.["sun.sun"];
-  if (sun && valid(sun)) return sun.state === "below_horizon";
+  if (sun && valid(sun)) return sun.state === "below_horizon" || !!hass?.themes?.darkMode;
   return !!hass?.themes?.darkMode;
 };
 

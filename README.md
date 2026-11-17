@@ -166,7 +166,7 @@ language: fr
 |---|---|---|---|
 | `title` | both | `EDF Tempo` (translated) | Card title |
 | `illustration` | both | `true` | Illustrated header (sky, pylon and house, lawn strip); `false` shows the classic header, with the picture back beside the days on the full card |
-| `illustration_theme` | both | `auto` | Sky of the illustration: `auto` (night when `sun.sun` is below the horizon, else Home Assistant's dark theme), `day` or `night` |
+| `illustration_theme` | both | `auto` | Sky of the illustration: `auto` (night when `sun.sun` is below the horizon or with Home Assistant's dark theme, even while the sun is up), `day` or `night` |
 | `show_title` | both | `true` | Show the title in the header |
 | `show_subtitle` | both | `true` | Show the subtitle (current price) under the title |
 | `today_entity` | both | Discovered | Entity giving today's color: any state or spelling the supported integrations use (`Bleu`, `BLANC`, `red`, `HPJR`, `HC BLEU`…) |

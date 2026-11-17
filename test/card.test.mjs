@@ -427,6 +427,17 @@ test("the illustrated header: the scene in the banner, night after sunset, uniqu
   assert.match(html(forced), /banner night/);
 });
 
+test("illustrated header: the dark theme shows the night picture even while the sun is up; forced day/night win", async () => {
+  const up = { "sun.sun": { state: "above_horizon", attributes: {} } };
+  for (const mini of [false, true]) {
+    const banner = async (darkMode, config = {}) => html((await newCard(config, { overrides: up, hass: { themes: { darkMode } }, mini })).card).match(/<div class="banner[^"]*">/)[0];
+    assert.match(await banner(true), / night/);
+    assert.doesNotMatch(await banner(false), / night/);
+    assert.doesNotMatch(await banner(true, { illustration_theme: "day" }), / night/);
+    assert.match(await banner(false, { illustration_theme: "night" }), / night/);
+  }
+});
+
 test("off-peak lightens the icon; illustration: false keeps the classic header", async () => {
   const { card } = await newCard({}, { now: NIGHT, overrides: offPeak });
   assert.match(html(card), /class="type-icon c-blue p-hc"/);
