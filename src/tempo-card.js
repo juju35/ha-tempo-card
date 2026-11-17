@@ -1539,7 +1539,7 @@ const BASE_STYLE = `
           display: block; min-width: 0; --tc-natural-width: 360px; }
   /* A size container has no width of its own content: this empty grid gives the card a natural width without a minimum. */
   :host::before { content: ""; display: grid; grid-template-columns: minmax(0, var(--tc-natural-width)); height: 0; }
-  ha-card { overflow: hidden; container-type: inline-size; }
+  ha-card { overflow: hidden; container: tc-card / inline-size; }
   .icon { width: 18px; height: 18px; fill: currentColor; flex: none; }
   .clickable { cursor: pointer; }
   [role="button"]:focus-visible, button:focus-visible { outline: 2px solid var(--primary-color, var(--tc-accent)); outline-offset: 2px; border-radius: 6px; }
@@ -1590,10 +1590,10 @@ const BASE_STYLE = `
           display: grid; place-items: center; color: var(--secondary-text-color); }
   .zoom .icon { width: 16px; height: 16px; }
   .zoom:hover { background: color-mix(in srgb, var(--tc-idle) 16%, transparent); color: var(--primary-text-color); }
-  @container (max-width: 330px) {
+  @container tc-card (max-width: 330px) {
     .sub-k { display: none; }
   }
-  @container (max-width: 230px) {
+  @container tc-card (max-width: 230px) {
     .chip { padding: 4px; flex: none; }
     .chip-text { display: none; }
     .header { gap: 6px; }
@@ -1638,10 +1638,10 @@ const FULL_STYLE = `
   .rows .v { text-align: right; font-weight: 500; white-space: nowrap; }
   .rows.cost { grid-template-columns: 10px minmax(0, 1fr) auto auto; }
   .rows.cost .kwh { text-align: right; color: var(--secondary-text-color); white-space: nowrap; }
-  @container (max-width: 230px) {
+  @container tc-card (max-width: 230px) {
     .picture { display: none; }
   }
-  @container (max-width: 330px) {
+  @container tc-card (max-width: 330px) {
     .picture { width: 84px; height: 70px; }
     .hero { gap: 8px; }
     .rows { grid-template-columns: 10px minmax(0, 1fr) auto; }
@@ -1663,7 +1663,7 @@ const MINI_STYLE = `
   .line { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--secondary-text-color); min-width: 0; }
   .line .icon { width: 16px; height: 16px; fill: var(--c); }
   .line span { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-  @container (max-width: 220px) {
+  @container tc-card (max-width: 220px) {
     .pills { grid-template-columns: minmax(0, 1fr); }
   }
 `;
@@ -1844,6 +1844,12 @@ const BANNER_STYLE = `
            display: flex; align-items: center; gap: 10px; min-width: 0; }
   .htext .titles { display: flex; flex-direction: column; gap: 1px; align-items: flex-start; }
   .htext .titles > * { max-width: 100%; }
+  /* The title row: the title gives way first (down to 4 characters), the pill keeps its whole label. */
+  .tstack { display: flex; flex-direction: column; gap: 1px; align-items: flex-start; min-width: 0; max-width: 100%; }
+  .tstack > * { max-width: 100%; }
+  .trow { display: flex; align-items: center; gap: 8px; min-width: 0; max-width: 100%; }
+  .trow .name { flex: 0 1 auto; min-width: 4ch; }
+  :host([hide-title]) .trow > .name { display: none; }
   .banner .name { font-weight: 600; }
   .banner .sub { color: #3d5670; }
   .night .sub { color: rgba(255,255,255,.82); }
@@ -1859,16 +1865,32 @@ const BANNER_STYLE = `
   .night .type-icon.c-red { --tc-ic: #ff6b6b; } .night .type-icon.c-red.p-hc { --tc-ic: #c45a5a; }
   .night .type-icon.c-unknown { --tc-ic: #7c8693; }
   .banner .type-icon.c-red.p-hp { animation: tc-pulse 1.2s ease-in-out infinite; }
-  .banner .chip { margin-top: 3px; max-width: 100%; background: rgba(255,255,255,.7); color: color-mix(in srgb, var(--c) 60%, #10283f); }
-  .banner.night .chip { background: rgba(10,20,40,.5); color: color-mix(in srgb, var(--c) 40%, #fff); }
-  .banner.night .chip.c-white { color: #fff; } .banner.night .chip.c-white .icon { fill: #fff; }
+  /* The status pill on the sky: the day's color on frosted glass. */
+  .banner .chip { flex: 0 0 auto; align-self: center; margin: 0; max-width: 51%; padding: 1px 8px; border-radius: 12px; font-size: 11px; font-weight: 500;
+                  line-height: 16px; background: color-mix(in srgb, var(--c) 18%, rgba(255,255,255,.78)); color: color-mix(in srgb, var(--c) 45%, #0d2a45); }
+  .banner.night .chip { background: color-mix(in srgb, var(--c) 30%, rgba(8,18,38,.55)); color: color-mix(in srgb, var(--c) 35%, #ffffff); }
+  .banner .chip .dot { width: 7px; height: 7px; border-radius: 50%; flex: none; background: var(--disc); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--c) 60%, transparent); }
   .banner.zoomable { --tc-text-right: 128px; } .banner.zoomable .tc-art { right: 30px; }
-  .banner .zoom { position: absolute; z-index: 2; top: 6px; right: 6px; margin: 0; color: #10283f; background: rgba(255,255,255,.55); }
-  .banner.night .zoom { color: #fff; background: rgba(10,20,40,.45); }
+  .banner .zoom { position: absolute; z-index: 2; top: 5px; right: 5px; margin: 0; color: #33506b; background: rgba(255,255,255,.55);
+                  box-shadow: inset 0 0 0 1px rgba(255,255,255,.7); backdrop-filter: blur(4px); }
+  .banner .zoom:hover { background: rgba(255,255,255,.75); color: #33506b; }
+  .banner.night .zoom { color: #ffffff; background: rgba(255,255,255,.12); box-shadow: inset 0 0 0 1px rgba(255,255,255,.2); }
+  .banner.night .zoom:hover { background: rgba(255,255,255,.22); color: #ffffff; }
+  /* Too little room beside the picture: the pill on its own line under the subtitle; a very narrow card keeps its
+     dot only. The titles are their own container, so the pill moves when the title row runs out of room. */
+  .htext .titles { container: tc-titles / inline-size; align-self: stretch; justify-content: center; }
+  @container tc-titles (max-width: 180px) {
+    .tstack { display: grid; justify-items: start; row-gap: 1px; }
+    .trow { display: contents; }
+    .trow .name { max-width: 100%; }
+    .banner .chip { order: 3; max-width: 100%; padding: 1px 8px; }
+    .banner .chip .chip-text { display: inline; }
+  }
+  @container tc-card (max-width: 200px) { .banner .chip { padding: 4px; } .banner .chip .chip-text { display: none; } }
   @keyframes tc-drift { to { transform: translateX(4px); } }
   @keyframes tc-twinkle-sky { from { opacity: .3; } to { opacity: 1; } }
   /* Narrow card: no room for the picture beside the text, the sky alone stays. */
-  @container (max-width: 250px) { .tc-art { display: none; } .htext { right: 36px; } }
+  @container tc-card (max-width: 250px) { .tc-art { display: none; } .htext { right: 36px; } }
   @media (prefers-reduced-motion: reduce) { .tc-cloud, .tc-star, .banner .type-icon, .banner .scene * { animation: none !important; } }
 `;
 
@@ -2235,11 +2257,15 @@ class TempoCard extends HTMLElement {
     const titles = `<div class="name">${esc(c.title || this._t("card_title"))}</div>${sub ? `<div class="sub">${sub}</div>` : ""}`;
     const chip = `<span class="chip ${cls}${chipAttrs}" title="${esc(chipLabel)}" aria-label="${esc(chipLabel)}">${svgIcon(m.period === "hc" ? ICONS.night : ICONS.sun)}<span class="chip-text">${esc(chipLabel)}</span></span>`;
     if (this._illustrated()) {
+      // On the sky, the pill (a dot in the day's color and the period) follows the title on its row; on a narrow card
+      // it drops under the subtitle, and on a very narrow one only its dot stays (the label in its title).
+      const pill = `<span class="chip ${cls}${chipAttrs}" title="${esc(chipLabel)}" aria-label="${esc(chipLabel)}"><span class="dot"></span><span class="chip-text">${esc(chipLabel)}</span></span>`;
+      const bannerTitles = `<div class="tstack"><div class="trow"><div class="name">${esc(c.title || this._t("card_title"))}</div>${pill}</div>${sub ? `<div class="sub">${sub}</div>` : ""}</div>`;
       const night = isNight(this._hass, c) ? " night" : "";
       const zoom = this._zoomButton();
       return `
       <div class="banner${night}${zoom ? " zoomable" : ""}">${skySvg()}<div class="tc-ground"></div><div class="tc-art">${sceneSvg(m.today, m.period, this._uid, true)}</div>
-        <div class="htext">${icon}<div class="titles">${titles}${chip}</div></div>
+        <div class="htext">${icon}<div class="titles">${bannerTitles}</div></div>
         ${zoom}
       </div>`;
     }
