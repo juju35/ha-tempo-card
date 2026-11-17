@@ -1845,9 +1845,9 @@ const BANNER_STYLE = `
   .htext .titles { display: flex; flex-direction: column; gap: 1px; align-items: flex-start; }
   .htext .titles > * { max-width: 100%; }
   /* The title row: the title gives way first (down to 4 characters), the pill keeps its whole label. */
-  .tstack { display: flex; flex-direction: column; gap: 1px; align-items: flex-start; min-width: 0; max-width: 100%; }
+  .tstack { display: flex; flex-direction: column; gap: 1px; align-items: flex-start; min-width: 0; width: 100%; }
   .tstack > * { max-width: 100%; }
-  .trow { display: flex; align-items: center; gap: 8px; min-width: 0; max-width: 100%; }
+  .trow { display: flex; align-items: center; gap: 8px; min-width: 0; width: 100%; }
   .trow .name { flex: 0 1 auto; min-width: 4ch; }
   :host([hide-title]) .trow > .name { display: none; }
   .banner .name { font-weight: 600; }
