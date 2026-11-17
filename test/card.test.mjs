@@ -405,3 +405,35 @@ test("no rewrite under a press: drawn after its release, and at once by its clic
   card.disconnectedCallback();
   assert.equal(card._pressing, false);
 });
+
+test("the illustrated header: the scene in the banner, night after sunset, unique ids per card", async () => {
+  const { tc: mod, card } = await newCard();
+  const h = html(card);
+  assert.match(h, /<div class="banner">/);
+  assert.match(h, /class="tc-ground"/);
+  assert.match(h, /class="type-icon c-white p-hp"/, "icon in the day's color, peak");
+  assert.doesNotMatch(h, /class="picture"/, "the hero picture moves to the banner");
+  const other = new mod.TempoCard();
+  other.setConfig({});
+  other.hass = makeHass();
+  const ids = (x) => [...html(x).matchAll(/id="(tc-[\w-]+)"/g)].map((m) => m[1]);
+  assert.ok(ids(card).length > 0);
+  assert.equal(ids(card).filter((id) => ids(other).includes(id)).length, 0, "no id shared between two cards");
+  const { card: night } = await newCard({}, { overrides: { "sun.sun": { state: "below_horizon", attributes: {} } } });
+  assert.match(html(night), /<div class="banner night">/);
+  const { card: day } = await newCard({ illustration_theme: "day" }, { overrides: { "sun.sun": { state: "below_horizon", attributes: {} } } });
+  assert.match(html(day), /<div class="banner">/);
+  const { card: forced } = await newCard({ illustration_theme: "night" });
+  assert.match(html(forced), /banner night/);
+});
+
+test("off-peak lightens the icon; illustration: false keeps the classic header", async () => {
+  const { card } = await newCard({}, { now: NIGHT, overrides: offPeak });
+  assert.match(html(card), /class="type-icon c-blue p-hc"/);
+  const { card: classic } = await newCard({ illustration: false });
+  assert.doesNotMatch(html(classic), /class="banner/);
+  assert.match(html(classic), /<div class="header">/);
+  assert.match(html(classic), /class="picture"/);
+  const { card: mini } = await newCard({}, { mini: true });
+  assert.match(html(mini), /class="banner zoomable"/);
+});

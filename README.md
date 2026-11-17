@@ -31,11 +31,11 @@ The cards work on top of the integrations you already use — [RTE Tempo](https:
 
 - Two cards: a full **Tempo Card** (`custom:tempo-card`) and a compact **Tempo Mini Card** (`custom:tempo-mini-card`)
 - Color of **today and tomorrow**, with the date of each Tempo day (a Tempo day runs from 06:00 to 06:00); tomorrow shows *Not yet known* until RTE publishes it
-- Animated scene, drawn like the appliances of the other cards: a pylon feeds a house under the sun or the moon, the current flows faster as the day gets dearer, and a warning flashes on a red day at peak hours (see [Animations](#animations))
+- **Illustrated header** (90 px on both cards): the title on the sky, an animated pylon feeding a house on the right and a strip of lawn underneath. The roof, the current and the glow take the color of the day, the sun shines at peak hours and the moon off-peak, the current flows faster as the day gets dearer, and a warning flashes on a red day at peak hours (see [Animations](#animations)). The sky turns to night after sunset (`sun.sun`, else the dark theme); `illustration_theme` forces day or night, `illustration: false` brings back the classic header
 - **Current period** (off-peak or peak hours) with its hours, a progress bar and a countdown to the next change, the current price per kWh and the price of the next period (with tomorrow's color when the next period starts the next Tempo day)
 - **Days left** of each color in the season (1 September to 31 August: 22 red, 43 white, the rest blue), with bars
 - **Estimated cost** of today and of the month, per color and period, from the long-term statistics of the six Tempo meter indexes and a price grid (EDF regulated prices by default, numbers or price entities), with an optional monthly subscription
-- Header icon and status chip in the color of the day; the chip tells the current period
+- Header icon in the color of the day, deep at peak hours and light off-peak (grey while unknown), and a status chip telling the current period
 - Collapsible sections (period, season, cost): click a section title to fold or unfold it, a click elsewhere folds them back
 - Detail button on the mini card (top right): it switches the mini card to the full card's content and back; a click anywhere outside the card brings the compact view back
 - Click any value to open its Home Assistant history (more-info dialog)
@@ -165,6 +165,8 @@ language: fr
 | Option | Card | Default | Description |
 |---|---|---|---|
 | `title` | both | `EDF Tempo` (translated) | Card title |
+| `illustration` | both | `true` | Illustrated header (sky, pylon and house, lawn strip); `false` shows the classic header, with the picture back beside the days on the full card |
+| `illustration_theme` | both | `auto` | Sky of the illustration: `auto` (night when `sun.sun` is below the horizon, else Home Assistant's dark theme), `day` or `night` |
 | `show_title` | both | `true` | Show the title in the header |
 | `show_subtitle` | both | `true` | Show the subtitle (current price) under the title |
 | `today_entity` | both | Discovered | Entity giving today's color: any state or spelling the supported integrations use (`Bleu`, `BLANC`, `red`, `HPJR`, `HC BLEU`…) |

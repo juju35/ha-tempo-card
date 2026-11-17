@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.1.0 - 2026-11-17
+
+### Features
+- Illustrated header on both cards (90 px), in the style of the other cards: the title and the current price on a sky at the left, the pylon feeding the house on the right, standing on a 10 px lawn strip that runs edge to edge. The roof, the current and the glow take the color of the day; the sun shines at peak hours and the moon off-peak; the current comes in from afar and flows faster as the day gets dearer; the warning flashes on a red day at peak hours.
+- Night sky after sunset (`sun.sun`, else the dark theme), forced with `illustration_theme: day | night`; `illustration: false` keeps the classic header (and the picture beside the days on the full card).
+- The header icon tells the status: the color of the day, deep at peak hours and light off-peak, grey while unknown; it pulses on a red day at peak hours.
+- New options in the visual editor of both cards.
+
 ## 1.0.3 - 2026-11-14
 
 ### Changes
