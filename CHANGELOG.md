@@ -7,7 +7,7 @@
 - Night sky after sunset (`sun.sun`) or with the dark theme, forced with `illustration_theme: day | night`; `illustration: false` keeps the classic header (and the picture beside the days on the full card).
 - The header icon tells the status: the color of the day, deep at peak hours and light off-peak, grey while unknown; it pulses on a red day at peak hours.
 - New options in the visual editor of both cards.
-- The status pill (a dot in the day's color and the current period) sits on the title row of the illustrated header, right after the title; it drops under the subtitle when room runs short and keeps only its dot on a very narrow card. The mini card's detail button sits in the banner's top-right corner, in the frosted style of the other cards.
+- The status pill (a dot in the day's color and the current period) sits on the title row right after the title only when the whole title and its whole label fit there (measured, in every language); otherwise on its own line under the subtitle (then kept to one line), and only its dot when even that does not fit in the banner above the lawn or beside the picture, or on a card 200 px wide or less. The same rule on the classic header. The mini card's detail button sits in the banner's top-right corner, in the frosted style of the other cards.
 - Night picture with the dark theme even while the sun is up (a day picture would glare on a dark dashboard); `illustration_theme: day | night` still forces one.
 
 ## 1.0.3 - 2026-11-14
