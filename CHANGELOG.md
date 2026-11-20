@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.1.3 - 2026-11-20
+
+### Fixes
+- Estimated cost: when the long-term statistics cannot be read (recorder unavailable, request refused), the tiles show "—" instead of a cost of zero (or the subscription alone), and a refresh that fails keeps the figures already read until the next try.
+
 ## 1.1.2 - 2026-11-18
 
 ### Fixes
