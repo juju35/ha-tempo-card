@@ -208,6 +208,23 @@ test("the statistics are asked once per day buckets of the month, in kWh changes
   assert.equal(calls.length, 1, "not asked again within five minutes");
 });
 
+test("statistics that cannot be read show no cost rather than a zero one", async () => {
+  const failing = { callWS: async () => Promise.reject(new Error("no recorder")) };
+  const { card } = await newCard({ subscription: 15.8 }, { hass: failing });
+  const h = html(card);
+  assert.match(h, /<div class="v">—<\/div>/);
+  assert.doesNotMatch(h, /€15\.80|€0\.53|incl\. subscription/);
+  assert.doesNotMatch(h, /class="rows cost"/);
+});
+
+test("a failed refresh keeps the figures already read", async () => {
+  const { card } = await newCard();
+  card._stats = { ...card._stats, at: 0 };
+  card.hass = { ...card.hass, callWS: async () => Promise.reject(new Error("timeout")), states: { ...card.hass.states } };
+  await tick();
+  assert.match(html(card), /<div class="v">€37\.22<\/div>/);
+});
+
 test("the monthly subscription is added to the cost", async () => {
   const { card } = await newCard({ subscription: 15.8 });
   // 37.22 + 15.80; the day gets 15.80 / 30.

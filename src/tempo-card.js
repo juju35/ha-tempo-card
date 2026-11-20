@@ -2463,7 +2463,8 @@ class TempoCard extends HTMLElement {
           this._stats = { key, at: now, data: data || {} };
         },
         () => {
-          this._stats = { key, at: now, data: {} };
+          // A failed refresh keeps the figures already read; a first read that fails shows none (not a zero cost).
+          this._stats = this._stats?.key === key && !this._stats.failed ? { ...this._stats, at: now } : { key, at: now, data: {}, failed: true };
         },
       )
       .finally(() => {
@@ -2475,6 +2476,8 @@ class TempoCard extends HTMLElement {
   _costSection(m) {
     const energy = this._energy(m);
     if (energy === null && !INDEX_KEYS.some((k) => m.s[k])) return "";
+    // The statistics could not be read: no figure rather than a cost of zero.
+    const failed = energy !== null && !!this._stats?.failed;
     const locale = this._locale();
     const cur = m.currency;
     const sub = num(this._config.subscription);
@@ -2487,7 +2490,7 @@ class TempoCard extends HTMLElement {
     const rows = [];
     for (const key of INDEX_KEYS) {
       const e = energy?.[key];
-      if (!e) continue;
+      if (!e || failed) continue;
       const [color, p] = key.split("_");
       const price = m.priceOf(color, p) ?? 0;
       dayCost += e.day * price;
@@ -2501,10 +2504,10 @@ class TempoCard extends HTMLElement {
       );
     }
     const loading = energy === null;
-    const kwh = (v) => (loading ? "" : `${fmtNum(v, 1, locale)} kWh`);
-    const tile = (k, v, s) => `<div class="tile"><div class="k"><span>${esc(k)}</span></div><div class="v">${esc(loading ? "…" : v)}</div><div class="s">${esc(s)}</div></div>`;
+    const kwh = (v) => (loading || failed ? "" : `${fmtNum(v, 1, locale)} kWh`);
+    const tile = (k, v, s) => `<div class="tile"><div class="k"><span>${esc(k)}</span></div><div class="v">${esc(loading ? "…" : failed ? "—" : v)}</div><div class="s">${esc(s)}</div></div>`;
     const subNote = sub ? ` · ${this._t("subscription_incl")}` : "";
-    const body = `<div class="tiles">${tile(this._t("today"), fmtMoney(dayCost, cur, locale), kwh(dayKwh))}${tile(this._t("this_month"), fmtMoney(monthCost, cur, locale), `${kwh(monthKwh)}${loading ? "" : subNote}`)}</div>${
+    const body = `<div class="tiles">${tile(this._t("today"), fmtMoney(dayCost, cur, locale), kwh(dayKwh))}${tile(this._t("this_month"), fmtMoney(monthCost, cur, locale), `${kwh(monthKwh)}${loading || failed ? "" : subNote}`)}</div>${
       rows.length ? `<div class="rows cost">${rows.join("")}</div>` : ""
     }`;
     return this._section("cost", ICONS.euro, this._t("cost"), body);
