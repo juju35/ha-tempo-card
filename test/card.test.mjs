@@ -269,11 +269,27 @@ test("sections can be hidden or folded, and fold back on a click elsewhere", asy
   assert.match(html(card), /data-section="season" aria-expanded="false"/);
   assert.doesNotMatch(html(card), /19 of 22 left/);
   const title = { dataset: { action: "toggle_section", section: "season" } };
+  card.events = [];
   card.shadowRoot.listeners.click({ composedPath: () => [title, card], stopPropagation() {} });
   assert.match(html(card), /19 of 22 left/);
+  // The masonry view is told the card's size changed.
+  assert.ok(card.events.some((e) => e.type === "iron-resize"));
+  card.events = [];
   t.fire("pointerdown", { composedPath: () => [] });
   t.fire("pointerup", { composedPath: () => [] });
   assert.doesNotMatch(html(card), /19 of 22 left/);
+  assert.ok(card.events.some((e) => e.type === "iron-resize"));
+});
+
+test("the masonry size follows the drawn height, 7 before the card is drawn", async () => {
+  const { card } = await newCard();
+  assert.equal(card.getCardSize(), 7);
+  const drawn = (offsetHeight) => {
+    card.shadowRoot.querySelector = (sel) => (sel === "ha-card" ? { offsetHeight } : null);
+    return card.getCardSize();
+  };
+  assert.equal(drawn(420), 9);
+  assert.equal(drawn(80), 2);
 });
 
 test("no Tempo entity: a message says what to set", async () => {

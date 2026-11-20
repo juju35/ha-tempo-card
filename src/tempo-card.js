@@ -2025,8 +2025,10 @@ class TempoCard extends HTMLElement {
     return {};
   }
 
+  // Masonry rows of 50 px: the drawn height once the card is on the page (sections hidden or folded), 7 before it is.
   getCardSize() {
-    return 7;
+    const h = this.shadowRoot?.querySelector("ha-card")?.offsetHeight;
+    return h > 0 ? Math.max(2, Math.ceil(h / 50)) : 7;
   }
 
   getGridOptions() {
@@ -2073,6 +2075,7 @@ class TempoCard extends HTMLElement {
       if (!this._toggled?.size) return;
       this._toggled = new Map();
       this._update();
+      this.dispatchEvent(new CustomEvent("iron-resize", { bubbles: true, composed: true }));
     });
     this._outside.on();
     this._watchPill();
@@ -2196,7 +2199,9 @@ class TempoCard extends HTMLElement {
     if (action === "toggle_section") {
       const key = el.dataset.section;
       this._toggled = new Map(this._toggled).set(key, !this._isCollapsed(key));
-      return this._update();
+      this._update();
+      // getCardSize() changed: the masonry view measures the card again.
+      return this.dispatchEvent(new CustomEvent("iron-resize", { bubbles: true, composed: true }));
     }
     if (entity) this.dispatchEvent(new CustomEvent("hass-more-info", { detail: { entityId: entity }, bubbles: true, composed: true }));
   }
