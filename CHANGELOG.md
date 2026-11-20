@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.3 - 2026-11-20
+
+### Fixes
+- Estimated cost: when the long-term statistics cannot be read (recorder unavailable, request refused), the tiles show "—" instead of a cost of zero (or the subscription alone), and a refresh that fails keeps the figures already read until the next try.
+- Masonry view: the card asks for the room it really takes (its drawn height, with hidden or folded sections) instead of a fixed 7 rows, and tells the view when a section is folded or unfolded.
+
 ## 1.1.2 - 2026-11-18
 
 ### Fixes
