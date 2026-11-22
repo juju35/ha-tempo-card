@@ -2745,7 +2745,7 @@ for (const card of [
   },
 ]) {
   if (!window.customCards.some((c) => c.type === card.type))
-    window.customCards.push({ ...card, preview: true, documentationURL: "https://github.com/juju35/ha-tempo-card" });
+    window.customCards.push({ ...card, preview: false, documentationURL: "https://github.com/juju35/ha-tempo-card" });
 }
 
 console.info(`%c TEMPO-CARD %c v${VERSION} `, "color: white; background: #2563eb; font-weight: 700;", "color: #2563eb; background: white; font-weight: 700;");
