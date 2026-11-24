@@ -1,8 +1,8 @@
 // Keyboard access, readable names and reduced motion.
 import assert from "node:assert/strict";
-import { readFileSync } from "node:fs";
 import { test } from "node:test";
 import { load, makeHass } from "./load.mjs";
+import { source } from "./source.mjs";
 
 const tc = load();
 const clickables = (html) => html.match(/<[a-z-]+\b[^>]*\bdata-(?:entity|action)="[^"]*"[^>]*>/g) || [];
@@ -47,6 +47,6 @@ test("the days and the status have a name, the pictures are hidden from screen r
 });
 
 test("every animation stops with the reduced motion setting", () => {
-  const src = readFileSync(new URL("../src/tempo-card.js", import.meta.url), "utf8");
+  const src = source;
   assert.match(src, /@media \(prefers-reduced-motion: reduce\) \{ \*, \*::before, \*::after \{ transition: none !important; animation: none !important; \} \}/);
 });
