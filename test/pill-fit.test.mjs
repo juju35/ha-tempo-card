@@ -2,11 +2,11 @@
 // whole title and the pill's whole label fit; otherwise on its own line under the subtitle; in the 90 px banner, its
 // dot alone when title, subtitle and pill still do not fit above the ground strip. No fixed width decides it.
 import assert from "node:assert/strict";
-import { readFileSync } from "node:fs";
 import { test } from "node:test";
 import { load } from "./load.mjs";
+import { source } from "./source.mjs";
 
-const SRC = readFileSync(new URL("../src/tempo-card.js", import.meta.url), "utf8");
+const SRC = source;
 
 // A title block (.titles > .trow > .name + .chip, then .sub) in a banner `bannerH` px high (null: a classic header),
 // whose boxes follow the classes _fitPill sets: the parts stacked and centred above the 10 px ground strip.
