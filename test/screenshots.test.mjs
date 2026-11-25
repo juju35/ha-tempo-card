@@ -30,11 +30,11 @@ test("one animation per distinct animated state, each in a different state", () 
   assert.equal(states.size, gifs.length / 2);
 });
 
+// Only orphans fail: a capture just added to the list is committed by the Screenshots workflow after the first push.
 test("every file in screenshots/ is rendered by the screenshot script and shown in the README", () => {
   const rendered = new Set([...shots.map((s) => `${s.file}.png`), ...gifs.map((g) => `${g.file}.gif`)]);
   const files = readdirSync(new URL("../screenshots/", import.meta.url));
   assert.deepEqual(files.filter((f) => !rendered.has(f)), []);
-  assert.deepEqual([...rendered].filter((f) => !files.includes(f)), []);
   const readme = readFileSync(new URL("../README.md", import.meta.url), "utf8");
   assert.deepEqual([...rendered].filter((f) => !readme.includes(`screenshots/${f}`)), []);
 });
