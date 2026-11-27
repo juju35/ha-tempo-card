@@ -5,6 +5,7 @@ import { COLORS, DAY_START_MIN, DEFAULT_TZ, ICONS, INDEX_KEYS, STATS_TTL } from 
 import { addDays, colorOf, epochOf, esc, fmtDate, fmtDuration, fmtMoney, fmtNum, fmtTime, intlLocale, num, parseRanges, periodAt, periodOf, seasonOf, seasonTotal, svgIcon, t, tempoDay, wall } from "./helpers.js";
 import { priceOf, readSrc, sourcesOf } from "./entity-discovery.js";
 import { BANNER_STYLE, BASE_STYLE, FULL_STYLE, MINI_STYLE, SCENE_STYLE, sceneSvg, skySvg } from "./styles.js";
+import { rcMorph } from "./in-place-redraw.js";
 
 // Elements a click acts on, and how one is told from the others across renders (focus kept by keyboard users).
 export const FOCUS_SELECTOR = "[data-action], [data-entity]";
@@ -287,7 +288,8 @@ export class TempoCard extends HTMLElement {
     if (html === this._html) return;
     const kept = this._focusedSpot();
     this._html = html;
-    this.shadowRoot.innerHTML = html;
+    // In place (see rcMorph): the nodes stay, so the card keeps its height, its animations and its focus.
+    rcMorph(this.shadowRoot, html);
     this._fitPill();
     if (kept) this._focusables(kept.key)[kept.index]?.focus({ preventScroll: true });
   }

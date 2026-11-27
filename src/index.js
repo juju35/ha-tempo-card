@@ -4,6 +4,7 @@ import "./card-picker.js";
 import "./i18n/strings.js";
 import "./core.js";
 import "./helpers.js";
+import "./in-place-redraw.js";
 import "./entity-discovery.js";
 import "./styles.js";
 import "./cards.js";
