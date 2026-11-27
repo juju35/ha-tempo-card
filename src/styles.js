@@ -4,7 +4,7 @@
 
 export const BASE_STYLE = `
   :host { --tc-blue: #2563eb; --tc-white: #f7f7f4; --tc-white-tint: #8a94a0; --tc-red: #dc2626;
-          --tc-ok: var(--success-color, #43a047); --tc-idle: var(--disabled-text-color, #9e9e9e); --tc-accent: #2563eb;
+          --tc-ok: var(--success-color, #43a047); --tc-idle: var(--secondary-text-color, #9e9e9e); --tc-accent: #2563eb;
           display: block; min-width: 0; --tc-natural-width: 360px; }
   /* A size container has no width of its own content: this empty grid gives the card a natural width without a minimum. */
   :host::before { content: ""; display: grid; grid-template-columns: minmax(0, var(--tc-natural-width)); height: 0; }
